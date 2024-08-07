@@ -1,113 +1,162 @@
+import Card from "@/components/card";
+import MaxWidthWrapper from "@/components/mww";
+import { Button } from "@/components/ui/button";
+import { cards, infoData } from "@/constants";
 import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
-export default function Home() {
+const page = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <div>
+      {/* Navbar */}
+      <nav className="z-[100] sticky backdrop-blur-md h-14 inset-x-0 top-0 w-full transition-all">
+        <MaxWidthWrapper>
+          <div className="flex h-14 items-center justify-between">
+            {/*left*/}
+            <div className="grid grid-cols-3 gap-4">
+              <Link href="/">
+                <FaYoutube className="text-3xl text-white cursor-pointer" />
+              </Link>
+              <Link href="/">
+                <FaXTwitter className="text-3xl text-white cursor-pointer" />
+              </Link>
+              <Link href="/">
+                <FaInstagram className="text-3xl text-white cursor-pointer" />
+              </Link>
+            </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+            {/*right*/}
+            <div className="grid grid-cols-2 items-end justify-end gap-4">
+              <Link href="/" className="text-md text-white cursor-pointer">
+                F&Q
+              </Link>
+              <Link href="/" className="text-md text-white cursor-pointer">
+                Pricing
+              </Link>
+            </div>
+          </div>
+          <div className="w-full h-px border-t-2 border-zinc-50" />
+        </MaxWidthWrapper>
+      </nav>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+      {/* Hero */}
+
+      <section className="relative">
+        <MaxWidthWrapper className="relative z-30 pb-24 pt-10 text-white flex flex-col justify-center">
+          <div>
+            <div className="flex flex-col items-center">
+              <h1 className="text-6xl font-extrabold">howtoai</h1>
+              <p className="mt-4 text-muted text-xl">
+                Taking Creators To Their First $10,000 on YouTube
+              </p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <Image
+                src="/img/heroImage.png"
+                alt="heroimg"
+                width={500}
+                height={500}
+              />
+              <div className="grid grid-cols-2 text-center space-x-10">
+                <Button className="px-7 w-64 h-14 py-2 mx-2 bg-white text-xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl">
+                  Learn more
+                </Button>
+                <Button className="px-7 w-64 h-14 py-2 mx-2 bg-white text-xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl">
+                  Join now
+                </Button>
+              </div>
+            </div>
+          </div>
+        </MaxWidthWrapper>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-6 left-0 z-10 w-full h-full object-cover"
         >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+          <source src="/video/home2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      {/* Statistics */}
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+      <section className="relative">
+        <MaxWidthWrapper className="relative pb-24 pt-10 text-white flex flex-col justify-center z-30">
+          <div className="pl-16 px-16">
+            <div className="flex justify-center items-center text-white py-12">
+              {infoData.map((item, index) => (
+                <React.Fragment key={index}>
+                  <div className="text-center space-x-4 px-4">
+                    <p className="text-4xl lg:text-6xl font-bold">
+                      {item.value}
+                      {index === 1 && (
+                        <span className="text-2xl font-light text-muted">
+                          hrs
+                        </span>
+                      )}
+                    </p>
+                    <p className="mt-2 font-semibold text-xl">{item.label}</p>
+                  </div>
+                  {index < infoData.length - 1 && (
+                    <div className="h-40 border-l-2 border-blue-500 mx-4" />
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+      {/* Graph */}
+      <section className="relative w-full h-screen">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
         >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+          <source src="/video/graph2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <MaxWidthWrapper className="relative z-10">
+          <div className="absolute top-0 left-0 p-10 flex flex-col space-y-6">
+            <span className="text-white text-5xl">3 Spots left</span>
+            <Button className="text-white w-64 h-14 text-2xl bg-custom-button-1 hover:bg-blue-700 transition delay-150 rounded-xl">
+              Join Now
+            </Button>
+          </div>
+        </MaxWidthWrapper>
+      </section>
+
+      {/* Cards */}
+      <section>
+        <MaxWidthWrapper className="text-white py-16">
+          <h2 className="text-center text-5xl font-semibold mb-8">
+            What the course includes
           </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 lg:grid-cols-3 px-6 gap-20">
+              {cards.map((card, index) => (
+                <Card
+                  key={index}
+                  imgsrc={card.img}
+                  title={card.title}
+                  description={card.description}
+                  backContent={card.backContent}
+                />
+              ))}
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </section>
+    </div>
   );
-}
+};
+
+export default page;
