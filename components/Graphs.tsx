@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import MaxWidthWrapper from "./mww";
+import Image from "next/image";
 
 const Graphs: React.FC = () => {
   return (
@@ -21,20 +22,23 @@ const Graphs: React.FC = () => {
             transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
             className="grid track grid-cols-3 flex-shrink-0"
           >
-            <img
+            <Image
               src="/img/analytics1.png"
               alt="Analytics 1"
-              className="h-[286px] w-[463px]"
+              height={286}
+              width={463}
             />
-            <img
+            <Image
               src="/img/analytics1.png"
               alt="Analytics 1"
-              className="h-[286px] w-[463px]"
+              height={286}
+              width={463}
             />
-            <img
+            <Image
               src="/img/analytics1.png"
               alt="Analytics 1"
-              className="h-[286px] w-[463px]"
+              height={286}
+              width={463}
             />
           </motion.div>
 
@@ -44,20 +48,23 @@ const Graphs: React.FC = () => {
             transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
             className="grid track grid-cols-3 flex-shrink-0"
           >
-            <img
+            <Image
               src="/img/analytics1.png"
               alt="Analytics 1"
-              className="h-[286px] w-[463px]"
+              height={286}
+              width={463}
             />
-            <img
+            <Image
               src="/img/analytics1.png"
               alt="Analytics 1"
-              className="h-[286px] w-[463px]"
+              height={286}
+              width={463}
             />
-            <img
+            <Image
               src="/img/analytics1.png"
               alt="Analytics 1"
-              className="h-[286px] w-[463px]"
+              height={286}
+              width={463}
             />
           </motion.div>
 
@@ -74,20 +81,23 @@ const Graphs: React.FC = () => {
             transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
             className="grid track grid-cols-3 flex-shrink-0"
           >
-            <img
+            <Image
               src="/img/analytics1.png"
-              alt="Analytics 2"
-              className="h-[286px] w-[463px]"
+              alt="Analytics 1"
+              height={286}
+              width={463}
             />
-            <img
+            <Image
               src="/img/analytics1.png"
-              alt="Analytics 2"
-              className="h-[286px] w-[463px]"
+              alt="Analytics 1"
+              height={286}
+              width={463}
             />
-            <img
+            <Image
               src="/img/analytics1.png"
-              alt="Analytics 2"
-              className="h-[286px] w-[463px]"
+              alt="Analytics 1"
+              height={286}
+              width={463}
             />
           </motion.div>
 
@@ -97,20 +107,23 @@ const Graphs: React.FC = () => {
             transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
             className="grid track grid-cols-3 flex-shrink-0"
           >
-            <img
+            <Image
               src="/img/analytics1.png"
-              alt="Analytics 2"
-              className="h-[286px] w-[463px]"
+              alt="Analytics 1"
+              height={286}
+              width={463}
             />
-            <img
+            <Image
               src="/img/analytics1.png"
-              alt="Analytics 2"
-              className="h-[286px] w-[463px]"
+              alt="Analytics 1"
+              height={286}
+              width={463}
             />
-            <img
+            <Image
               src="/img/analytics1.png"
-              alt="Analytics 2"
-              className="h-[286px] w-[463px]"
+              alt="Analytics 1"
+              height={286}
+              width={463}
             />
           </motion.div>
 
