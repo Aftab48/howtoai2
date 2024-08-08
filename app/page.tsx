@@ -7,6 +7,8 @@ import Link from "next/link";
 import React from "react";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { motion } from "framer-motion";
+import Graphs from "@/components/Graphs";
 
 const page = () => {
   return (
@@ -135,7 +137,7 @@ const page = () => {
       </section>
 
       {/* Cards */}
-      <section>
+      <section className="pb-16">
         <MaxWidthWrapper className="text-white py-16">
           <h2 className="text-center text-5xl font-semibold mb-8">
             What the course includes
@@ -155,6 +157,13 @@ const page = () => {
           </div>
         </MaxWidthWrapper>
       </section>
+
+      {/* Framer-Graphs */}
+      <section>
+        <Graphs />
+      </section>
+
+      {/* Pricing */}
     </div>
   );
 };
