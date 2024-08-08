@@ -11,6 +11,13 @@ const config = {
   ],
   prefix: "",
   theme: {
+    screen: {
+      screens: {
+        "max-lg": { max: "1024px" },
+        "max-md": { max: "768px" },
+        "max-sm": { max: "640px" },
+      },
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -25,8 +32,8 @@ const config = {
       boxShadow: {
         inBox: "inset 5px 12px 24px -15px rgba(74,144,226,1)",
         test: "-2px -2px 17px 15px rgba(0,0,0,0.26) inset",
-        price: "0px 0px 20px 23px rgba(56,182,255,.51) inset",
-        priceBlack: "0px 0px 25px 23px rgba(74,194,226,0.51) inset",
+        price: "0px 0px 42px 46px rgba(56,182,255,0.21) inset",
+        priceBlack: "0px 0px 42px 46px rgba(200, 200, 200, 0.15) inset",
       },
       colors: {
         "custom-border": "rgba(56,182,255,.51)",

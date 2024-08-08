@@ -1,14 +1,22 @@
 import Card from "@/components/card";
 import MaxWidthWrapper from "@/components/mww";
 import { Button } from "@/components/ui/button";
-import { cards, infoData } from "@/constants";
+import { cards, faqData, infoData, testimonials } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import Graphs from "@/components/Graphs";
+import PriceChart1 from "@/components/PriceChart1";
+import Pricechart2 from "@/components/Pricechart2";
+import TestimonialCard from "@/components/testimonials";
 
 const page = () => {
   return (
@@ -47,8 +55,8 @@ const page = () => {
       {/* Hero */}
 
       <section className="relative">
-        <MaxWidthWrapper className="relative z-30 pb-24 pt-10 text-white flex flex-col justify-center">
-          <div>
+        <MaxWidthWrapper className="relative pb-24 pt-10 text-white flex flex-col justify-center">
+          <div className="z-30">
             <div className="flex flex-col items-center">
               <h1 className="text-6xl font-extrabold">howtoai</h1>
               <p className="mt-4 text-muted text-xl">
@@ -72,19 +80,18 @@ const page = () => {
               </div>
             </div>
           </div>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute top-6 left-0 z-10 w-full h-full object-cover"
+          >
+            <source src="/video/home2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </MaxWidthWrapper>
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-6 left-0 z-10 w-full h-full object-cover"
-        >
-          <source src="/video/home2.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
       </section>
-
       {/* Statistics */}
 
       <section className="relative">
@@ -116,22 +123,25 @@ const page = () => {
 
       {/* Graph */}
       <section className="relative w-full h-screen">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        >
-          <source src="/video/graph2.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <MaxWidthWrapper className="relative z-10">
-          <div className="absolute top-0 left-0 p-10 flex flex-col space-y-6">
-            <span className="text-white text-5xl">3 Spots left</span>
-            <Button className="text-white w-64 h-14 text-2xl bg-custom-button-1 hover:bg-blue-700 transition delay-150 rounded-xl">
-              Join Now
-            </Button>
+        <MaxWidthWrapper className="relative w-full h-full">
+          <div className="relative w-full h-full overflow-hidden">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute top-0 left-0 w-full h-full object-cover z-0"
+              style={{ width: "100vw", height: "100vh" }}
+            >
+              <source src="/video/graph2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="absolute inset-0 flex flex-col space-y-6 p-10 z-10">
+              <span className="text-white text-5xl">3 Spots left</span>
+              <Button className="text-white w-64 h-14 text-2xl bg-custom-button-1 hover:bg-blue-700 transition delay-150 rounded-xl">
+                Join Now
+              </Button>
+            </div>
           </div>
         </MaxWidthWrapper>
       </section>
@@ -143,7 +153,7 @@ const page = () => {
             What the course includes
           </h2>
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 lg:grid-cols-3 px-6 gap-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-6 gap-20">
               {cards.map((card, index) => (
                 <Card
                   key={index}
@@ -164,6 +174,54 @@ const page = () => {
       </section>
 
       {/* Pricing */}
+      <section className="h-full">
+        <PriceChart1 />
+        <Pricechart2 />
+      </section>
+
+      {/* Testimonials */}
+
+      <section className="h-full mt-16 text-white">
+        <MaxWidthWrapper className="text-center">
+          <h2 className="text-white font-medium text-4xl">
+            See what others have to say
+            <br />
+            about our course
+          </h2>
+          <div className="p-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center gap-y-3 gap-x-3">
+              {testimonials.map((testimonial, index) => (
+                <TestimonialCard
+                  key={index}
+                  imageSrc={testimonial.img}
+                  name={testimonial.name}
+                  text={testimonial.description}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="w-full h-px border-t-2 border-zinc-50" />
+        </MaxWidthWrapper>
+      </section>
+
+      {/* FAQ */}
+      <section id="FAQ">
+        <MaxWidthWrapper className="p-10 text-white">
+          <h2 className="text-4xl font-semibold mb-7 text-center">
+            Frequently Asked Questions
+          </h2>
+          <Accordion type="single" collapsible className="w-full">
+            {faqData.map((item, index) => (
+              <React.Fragment key={index}>
+                <AccordionItem value={`item-${index + 1}`}>
+                  <AccordionTrigger>{item.question}</AccordionTrigger>
+                  <AccordionContent>{item.answer}</AccordionContent>
+                </AccordionItem>
+              </React.Fragment>
+            ))}
+          </Accordion>
+        </MaxWidthWrapper>
+      </section>
     </div>
   );
 };
