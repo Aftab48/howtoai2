@@ -17,7 +17,7 @@ const PriceChart1 = () => {
             <ul className="space-y-4 mt-6">
               <li>- 5 weekly exclusive events</li>
               <li>- Access to direct communication chat with mentors</li>
-              <li>- All howtoai's digital products & editing packs</li>
+              <li>- All howtoai&apos;s digital products & editing packs</li>
               <li>- Pre-made text guides, webinars & walkthroughs</li>
               <li>- Access to private marketplace</li>
               <li>- Access to safe middleman service</li>
