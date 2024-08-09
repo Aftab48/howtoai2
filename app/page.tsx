@@ -40,10 +40,13 @@ const page = () => {
 
             {/*right*/}
             <div className="grid grid-cols-2 items-end justify-end gap-4">
-              <Link href="/" className="text-md text-white cursor-pointer">
+              <Link href="#FAQ" className="text-md text-white cursor-pointer">
                 F&Q
               </Link>
-              <Link href="/" className="text-md text-white cursor-pointer">
+              <Link
+                href="#PRICING"
+                className="text-md text-white cursor-pointer"
+              >
                 Pricing
               </Link>
             </div>
@@ -56,48 +59,65 @@ const page = () => {
 
       <section className="relative">
         <MaxWidthWrapper className="relative pb-24 pt-10 text-white flex flex-col justify-center">
-          <div className="z-30">
-            <div className="flex flex-col items-center">
-              <h1 className="text-6xl font-extrabold">howtoai</h1>
-              <p className="mt-4 text-muted text-xl">
-                Taking Creators To Their First $10,000 on YouTube
-              </p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
+          {/* Header and Title Section */}
+          <div className="z-30 flex flex-col items-center">
+            <h1 className="text-6xl font-extrabold">howtoai</h1>
+            <p className="mt-4 text-muted text-xl">
+              Taking Creators To Their First $10,000 on YouTube
+            </p>
+          </div>
+
+          {/* Video Section */}
+          <div className="relative w-full h-[500px] mt-10 z-10">
+            <Image
+              src="/img/hero-bg.png"
+              alt="heroimg"
+              layout="fill"
+              className="z-5 w-full h-full object-cover"
+            />
+            {/* <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src="/video/home2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video> */}
+
+            {/* Centered Image Over Video */}
+            <div className="absolute inset-0 flex items-center justify-center z-20">
               <Image
                 src="/img/heroImage.png"
                 alt="heroimg"
                 width={500}
                 height={500}
+                className="z-20"
               />
-              <div className="grid grid-cols-2 text-center space-x-10">
-                <Button className="px-7 w-64 h-14 py-2 mx-2 bg-white text-xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl">
-                  Learn more
-                </Button>
-                <Button className="px-7 w-64 h-14 py-2 mx-2 bg-white text-xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl">
-                  Join now
-                </Button>
-              </div>
             </div>
           </div>
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute top-6 left-0 z-10 w-full h-full object-cover"
-          >
-            <source src="/video/home2.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+
+          {/* Buttons and Additional Content Section */}
+          <div className="flex flex-col items-center justify-center z-20 pt-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 text-center gap-20 z-20 mt-10">
+              <Button className="px-7 w-64 h-14 py-2 mx-2 bg-white text-xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl">
+                Learn more
+              </Button>
+              <Button className="px-7 w-64 h-14 py-2 mx-2 bg-white text-xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl">
+                Join now
+              </Button>
+            </div>
+          </div>
         </MaxWidthWrapper>
       </section>
+
       {/* Statistics */}
 
       <section className="relative">
-        <MaxWidthWrapper className="relative pb-24 pt-10 text-white flex flex-col justify-center z-30">
+        <MaxWidthWrapper className="relative pb-10 sm:pb-20 pt-6 sm:pt-10 text-white flex flex-col justify-center z-30">
           <div className="pl-16 px-16">
-            <div className="flex justify-center items-center text-white py-12">
+            <div className="flex flex-col sm:flex-row justify-center items-center text-white py-12">
               {infoData.map((item, index) => (
                 <React.Fragment key={index}>
                   <div className="text-center space-x-4 px-4">
@@ -112,7 +132,10 @@ const page = () => {
                     <p className="mt-2 font-semibold text-xl">{item.label}</p>
                   </div>
                   {index < infoData.length - 1 && (
-                    <div className="h-40 border-l-2 border-blue-500 mx-4" />
+                    <>
+                      <div className="h-40 hidden sm:block border-l-2 border-blue-500 mx-4" />
+                      <div className="w-40 block sm:hidden border-t-2 border-blue-500 my-4" />
+                    </>
                   )}
                 </React.Fragment>
               ))}
@@ -130,7 +153,7 @@ const page = () => {
               loop
               muted
               playsInline
-              className="absolute top-0 left-0 w-full h-full object-cover z-0"
+              className="absolute top-0 left-0 w-full h-full object-contain z-0"
               style={{ width: "100vw", height: "100vh" }}
             >
               <source src="/video/graph2.mp4" type="video/mp4" />
@@ -153,7 +176,7 @@ const page = () => {
             What the course includes
           </h2>
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-6 gap-20">
+            <div className="grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 px-6 gap-20">
               {cards.map((card, index) => (
                 <Card
                   key={index}
@@ -163,6 +186,7 @@ const page = () => {
                   backContent={card.backContent}
                 />
               ))}
+                
             </div>
           </div>
         </MaxWidthWrapper>
@@ -174,7 +198,7 @@ const page = () => {
       </section>
 
       {/* Pricing */}
-      <section className="h-full">
+      <section className="h-full" id="PRICING">
         <PriceChart1 />
         <Pricechart2 />
       </section>

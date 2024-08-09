@@ -31,7 +31,8 @@ export const cards = [
     img: "/img/Vector4.png",
     title: "Knowledge to make your first $10,000",
     description: "",
-    backContent: "....",
+    backContent:
+      "We have several 6 figure coaches all sharing their experience and knowledge to help you grow your business.",
   },
   {
     img: "/img/Vector5.png",
