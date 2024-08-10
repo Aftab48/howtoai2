@@ -11,7 +11,7 @@ const Cards = () => {
           What the course includes
         </h2>
         <div className="container mx-auto ">
-          <div className="grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-3 px-6 gap-x-48 gap-y-8">
+          <div className="grid grid-cols-1 place-items-center md:grid-cols-2 xl:grid-cols-3 px-6 gap-x-48 gap-y-8">
             {cards.map((card, index) => (
               <Card
                 key={index}

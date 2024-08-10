@@ -1,8 +1,13 @@
 "use client";
 
-import { useAnimation, useScroll, motion } from "framer-motion";
+import {
+  useAnimation,
+  useScroll,
+  motion,
+  useMotionValueEvent,
+} from "framer-motion";
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 
 interface CardProps {
   imgsrc: string;
@@ -24,15 +29,13 @@ const Card: React.FC<CardProps> = ({
     offset: ["0.1 0.9", "0.5 1"],
   });
 
-  useEffect(() => {
-    scrollYProgress.onChange((latest) => {
-      if (latest > 0.1) {
-        controls.start("visible");
-      } else {
-        controls.start("hidden");
-      }
-    });
-  }, [scrollYProgress, controls]);
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    if (latest > 0.1) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  });
 
   const cardVariants = {
     hidden: { opacity: 0, rotateY: 90 },
@@ -51,8 +54,7 @@ const Card: React.FC<CardProps> = ({
       variants={cardVariants}
       initial="hidden"
       animate={controls}
-      className="relative flip-card"
-      style={{ width: "365px", height: "311px" }}
+      className="relative flip-card w-[260px] h-[220px] sm:w-[300px] sm:h-[260px] lg:w-[365px] lg:h-[311px] px-6 sm:px-0"
     >
       <div className="flip-card-inner w-full h-full">
         <div className="flip-card-front w-full h-full p-6 border-4 border-blue-500 text-center rounded-xl shadow-inBox bg-black">
