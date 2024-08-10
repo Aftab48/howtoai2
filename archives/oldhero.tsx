@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import React from "react";
-import { Button } from "../../components/ui/button";
-import MaxWidthWrapper from "../../components/mww";
+
 import { motion } from "framer-motion";
+import MaxWidthWrapper from "@/components/mww";
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
@@ -19,35 +20,31 @@ const Hero = () => {
           </p>
         </div>
 
-        {/* Video Section with Fast Blue Glowing Shadow */}
+        {/* Video Section */}
         <div className="relative w-full h-[500px] mt-10 z-10 overflow-hidden">
-          <motion.div
-            className="absolute inset-0"
-            initial={{
-              opacity: 1,
-              boxShadow: "0px 0px 0px rgba(0, 0, 255, 0)",
-            }}
-            animate={{
-              opacity: [1, 0.5, 1],
-              boxShadow: [
-                "0px 0px 0px rgba(0, 0, 255, 0)",
-                "0px 0px 100px rgba(0, 0, 255, 1)",
-                "0px 0px 0px rgba(0, 0, 255, 0)",
-              ],
-            }}
-            transition={{
-              repeat: Infinity,
-              duration: 3, // Reduced duration for a faster animation
-              ease: "easeInOut",
-            }}
-          >
-            <Image
-              src="/img/hero-bg.png"
-              alt="heroimg"
-              fill
-              className="z-5 w-full h-full object-cover"
-            />
-          </motion.div>
+          {/* <motion.div
+          initial={{ x: "-100%" }}
+          animate={{ x: "100%" }}
+          transition={{ repeat: Infinity, duration: 0.01, ease: "linear" }}
+          className="absolute inset-0"
+        > */}
+          <Image
+            src="/img/hero-bg.png"
+            alt="heroimg"
+            fill
+            className="z-5 w-full h-full object-cover"
+          />
+          {/* </motion.div> */}
+          {/* <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src="/video/home2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video> */}
 
           {/* Centered Image Over Video */}
           <div className="absolute inset-0 flex items-center justify-center z-20">

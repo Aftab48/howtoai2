@@ -15,7 +15,7 @@ const FAQ = () => {
         <h2 className="text-4xl font-medium mb-7 text-center">
           Frequently Asked Questions
         </h2>
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion type="single" collapsible className="px-auto w-full">
           {faqData.map((item, index) => (
             <React.Fragment key={index}>
               <AccordionItem

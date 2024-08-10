@@ -19,7 +19,7 @@ const FramerGraphs: React.FC = () => {
           <motion.div
             initial={{ x: 0 }}
             animate={{ x: "-100%" }}
-            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
             className="grid track grid-cols-3 flex-shrink-0"
           >
             <Image
@@ -45,7 +45,7 @@ const FramerGraphs: React.FC = () => {
           <motion.div
             initial={{ x: 0 }}
             animate={{ x: "-100%" }}
-            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
             className="grid track grid-cols-3 flex-shrink-0"
           >
             <Image
@@ -78,7 +78,7 @@ const FramerGraphs: React.FC = () => {
           <motion.div
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
-            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
             className="grid track grid-cols-3 flex-shrink-0"
           >
             <Image
@@ -104,7 +104,7 @@ const FramerGraphs: React.FC = () => {
           <motion.div
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
-            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
             className="grid track grid-cols-3 flex-shrink-0"
           >
             <Image
