@@ -1,12 +1,12 @@
-import PriceChart1 from "@/components/PriceChart1";
-import PriceChart2 from "@/components/PriceChart2";
+import Price2 from "@/components/Price2";
+import Price1 from "@/components/Price1";
 import React from "react";
 
 const Pricing = () => {
   return (
     <div>
-      <PriceChart1 />
-      <PriceChart2 />
+      <Price1 />
+      <Price2 />
     </div>
   );
 };
