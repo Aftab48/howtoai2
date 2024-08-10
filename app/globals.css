@@ -37,6 +37,20 @@
 }
 
 .flip-card {
-  width: 300px; /* Adjust as needed */
-  height: 300px; /* Adjust as needed */
+  width: 365px; /* Adjust as needed */
+  height: 311px; /* Adjust as needed */
+}
+
+.ltr-linear-infinite {
+  animation: normal 100s linear infinite;
+}
+
+.grid-s-f {
+  display: grid;
+  grid-template-rows: 3fr 2fr;
+}
+
+.grid-f-f {
+  display: grid;
+  grid-template-rows: 2fr 3fr;
 }

@@ -1,5 +1,8 @@
+"use client";
+
+import { useAnimation, useScroll, motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 interface CardProps {
   imgsrc: string;
@@ -14,27 +17,66 @@ const Card: React.FC<CardProps> = ({
   description,
   backContent,
 }) => {
-  return (
-    <div className="relative w-full h-full flip-card">
-      <div className="flip-card-inner">
-        <div className="flip-card-front p-10 border-4 border-blue-500 text-center rounded-xl shadow-inBox bg-black">
-          <Image
-            src={imgsrc}
-            alt={title}
-            width={75}
-            height={75}
-            className="mx-auto mb-4"
-          />
+  const ref = useRef<HTMLDivElement>(null);
+  const controls = useAnimation();
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0.1 0.9", "0.5 1"],
+  });
 
-          <h3 className="text-3xl pt-10">{title}</h3>
-          <p className="text-gray-400">{description}</p>
+  useEffect(() => {
+    scrollYProgress.onChange((latest) => {
+      if (latest > 0.1) {
+        controls.start("visible");
+      } else {
+        controls.start("hidden");
+      }
+    });
+  }, [scrollYProgress, controls]);
+
+  const cardVariants = {
+    hidden: { opacity: 0, rotateY: 90 },
+    visible: {
+      opacity: 1,
+      rotateY: 0,
+      transition: {
+        duration: 0.6,
+      },
+    },
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      variants={cardVariants}
+      initial="hidden"
+      animate={controls}
+      className="relative flip-card"
+      style={{ width: "365px", height: "311px" }}
+    >
+      <div className="flip-card-inner w-full h-full">
+        <div className="flip-card-front w-full h-full p-6 border-4 border-blue-500 text-center rounded-xl shadow-inBox bg-black">
+          <div className="flex flex-col h-full">
+            <div className="flex-shrink-0">
+              <Image
+                src={imgsrc}
+                alt={title}
+                width={67}
+                height={67}
+                className="mx-auto"
+              />
+            </div>
+            <div className="flex-grow flex flex-col justify-center pt-6">
+              <h3 className="text-3xl">{title}</h3>
+              <p className="text-gray-400 pt-2">{description}</p>
+            </div>
+          </div>
         </div>
-        <div className="flip-card-back p-6 border-4 border-blue-500  text-center rounded-xl bg-[#00A3FF]">
-          {/* <h3 className="text-3xl pb-10">{title}</h3> */}
-          <p className="text-2xl mt-6 relative text-zinc-50">{backContent}</p>
+        <div className="flip-card-back w-full h-full p-6 border-4 border-blue-500 text-center rounded-xl bg-[#00A3FF] flex items-center justify-center">
+          <p className="text-2xl text-zinc-50">{backContent}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

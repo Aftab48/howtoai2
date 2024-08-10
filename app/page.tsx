@@ -17,6 +17,7 @@ import Graphs from "@/components/Graphs";
 import PriceChart1 from "@/components/PriceChart1";
 import Pricechart2 from "@/components/Pricechart2";
 import TestimonialCard from "@/components/testimonials";
+import { Review } from "@/components/reviews";
 
 const page = () => {
   return (
@@ -63,7 +64,8 @@ const page = () => {
           <div className="z-30 flex flex-col items-center">
             <h1 className="text-6xl font-extrabold">howtoai</h1>
             <p className="mt-4 text-muted text-xl">
-              Taking Creators To Their First $10,000 on YouTube
+              Taking Creators To Their First <br className="block sm:hidden" />{" "}
+              <span className="ml-12 sm:ml-0">$10,000 on YouTube</span>
             </p>
           </div>
 
@@ -72,7 +74,7 @@ const page = () => {
             <Image
               src="/img/hero-bg.png"
               alt="heroimg"
-              layout="fill"
+              fill
               className="z-5 w-full h-full object-cover"
             />
             {/* <video
@@ -115,9 +117,9 @@ const page = () => {
       {/* Statistics */}
 
       <section className="relative">
-        <MaxWidthWrapper className="relative pb-10 sm:pb-20 pt-6 sm:pt-10 text-white flex flex-col justify-center z-30">
-          <div className="pl-16 px-16">
-            <div className="flex flex-col sm:flex-row justify-center items-center text-white py-12">
+        <MaxWidthWrapper className="relative pb-5 sm:pb-10 pt-2 sm:pt-5 md:pt-10 text-white flex flex-col justify-center z-30">
+          <div className="px-16">
+            <div className="flex flex-col md:space-x-10 lg:space-x-20 sm:flex-row justify-center items-center text-white py-12">
               {infoData.map((item, index) => (
                 <React.Fragment key={index}>
                   <div className="text-center space-x-4 px-4">
@@ -159,7 +161,7 @@ const page = () => {
               <source src="/video/graph2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div className="absolute inset-0 flex flex-col space-y-6 p-10 z-10">
+            <div className="absolute inset-0 flex flex-col justify-start items-start space-y-6 p-10 z-10 pt-[10vh] md:pt-[17vh]">
               <span className="text-white text-5xl">3 Spots left</span>
               <Button className="text-white w-64 h-14 text-2xl bg-custom-button-1 hover:bg-blue-700 transition delay-150 rounded-xl">
                 Join Now
@@ -175,8 +177,8 @@ const page = () => {
           <h2 className="text-center text-5xl font-semibold mb-8">
             What the course includes
           </h2>
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 px-6 gap-20">
+          <div className="container mx-auto ">
+            <div className="grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-3 px-6 gap-x-48 gap-y-8">
               {cards.map((card, index) => (
                 <Card
                   key={index}
@@ -206,7 +208,7 @@ const page = () => {
       {/* Testimonials */}
 
       <section className="h-full mt-16 text-white">
-        <MaxWidthWrapper className="text-center">
+        {/* <MaxWidthWrapper className="text-center">
           <h2 className="text-white font-medium text-4xl">
             See what others have to say
             <br />
@@ -225,7 +227,8 @@ const page = () => {
             </div>
           </div>
           <div className="w-full h-px border-t-2 border-zinc-50" />
-        </MaxWidthWrapper>
+        </MaxWidthWrapper> */}
+        <Review />
       </section>
 
       {/* FAQ */}
