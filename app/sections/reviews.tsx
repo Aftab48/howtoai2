@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
-import MaxWidthWrapper from "./mww";
+import MaxWidthWrapper from "@/components/mww";
 import { motion, useScroll, useAnimation } from "framer-motion";
 
-export const Review = () => {
+const Review = () => {
   const ref = useRef<HTMLDivElement>(null);
   const controls = useAnimation();
   const { scrollYProgress } = useScroll({
@@ -45,7 +45,7 @@ export const Review = () => {
   };
 
   return (
-    <section className="h-full text-white">
+    <section className="h-full mt-16 text-white">
       <MaxWidthWrapper className="text-center">
         <h2 className="text-white text-4xl">
           See What Others have to say
@@ -187,3 +187,5 @@ export const Review = () => {
     </section>
   );
 };
+
+export default Review;

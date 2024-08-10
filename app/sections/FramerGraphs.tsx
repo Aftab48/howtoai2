@@ -2,10 +2,10 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import MaxWidthWrapper from "./mww";
 import Image from "next/image";
+import MaxWidthWrapper from "@/components/mww";
 
-const Graphs: React.FC = () => {
+const FramerGraphs: React.FC = () => {
   return (
     <section className="h-full relative">
       <MaxWidthWrapper>
@@ -137,4 +137,4 @@ const Graphs: React.FC = () => {
   );
 };
 
-export default Graphs;
+export default FramerGraphs;

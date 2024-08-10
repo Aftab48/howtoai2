@@ -6,7 +6,7 @@ import Image from "next/image";
 import { motion, useScroll } from "framer-motion";
 import { Button } from "./ui/button";
 
-const PriceChart1 = () => {
+const PriceChart2 = () => {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -62,4 +62,4 @@ const PriceChart1 = () => {
   );
 };
 
-export default PriceChart1;
+export default PriceChart2;
