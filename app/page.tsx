@@ -234,15 +234,20 @@ const page = () => {
       {/* FAQ */}
       <section id="FAQ">
         <MaxWidthWrapper className="p-10 text-white">
-          <h2 className="text-4xl font-semibold mb-7 text-center">
+          <h2 className="text-4xl font-medium mb-7 text-center">
             Frequently Asked Questions
           </h2>
           <Accordion type="single" collapsible className="w-full">
             {faqData.map((item, index) => (
               <React.Fragment key={index}>
-                <AccordionItem value={`item-${index + 1}`}>
+                <AccordionItem
+                  value={`item-${index + 1}`}
+                  className="border-x border-y rounded-2xl m-4 px-6"
+                >
                   <AccordionTrigger>{item.question}</AccordionTrigger>
-                  <AccordionContent>{item.answer}</AccordionContent>
+                  <AccordionContent className="border-t border-zinc-600/50 py-4">
+                    {item.answer}
+                  </AccordionContent>
                 </AccordionItem>
               </React.Fragment>
             ))}

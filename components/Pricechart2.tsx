@@ -54,7 +54,7 @@ const PriceChart1 = () => {
             alt="Mentor"
             width={600}
             height={500}
-            className="absolute hidden xl:block lg:right-[1.8rem] bottom-4 object-contain z-10"
+            className="absolute hidden xl:block lg:right-[1.8rem] bottom-11 object-contain z-10"
           />
         </div>
       </MaxWidthWrapper>
