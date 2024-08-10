@@ -4,10 +4,10 @@ import React from "react";
 
 const Pricing = () => {
   return (
-    <>
+    <div>
       <PriceChart1 />
       <PriceChart2 />
-    </>
+    </div>
   );
 };
 
