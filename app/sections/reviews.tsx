@@ -3,6 +3,7 @@
 import React, { useRef, useEffect } from "react";
 import MaxWidthWrapper from "@/components/mww";
 import { motion, useScroll, useAnimation } from "framer-motion";
+import Image from "next/image";
 
 const Review = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -60,7 +61,7 @@ const Review = () => {
           variants={parentVariants}
           initial="hidden"
           animate={controls}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-3 justify-center gap-x-4 p-10"
+          className="grid grid-cols-1 lg:grid-cols-3 justify-center gap-x-4 p-10"
         >
           <motion.div
             variants={childVariants}
@@ -68,10 +69,12 @@ const Review = () => {
           >
             <div className="rounded-xl p-4 shadow-test bg-[#222222]">
               <div className="flex items-center mb-4">
-                <img
+                <Image
                   src="/img/Ellipse1.png"
                   alt="Risky"
-                  className="w-12 h-12 rounded-full mr-4"
+                  width={48}
+                  height={48}
+                  className="rounded-full mr-4"
                 />
                 <h4 className="text-lg text-[#FFFFFF] font-semibold">Risky</h4>
               </div>
@@ -84,12 +87,14 @@ const Review = () => {
                 helpfulness of our mentors. W program join up right now
               </p>
             </div>
-            <div className="rounded-xl shadow-test p-4 bg-[#222222]">
+            <div className="rounded-xl mb-0 sm:mb-4 md:mb-0 shadow-test p-4 bg-[#222222]">
               <div className="flex items-center mb-4">
-                <img
+                <Image
                   src="/img/Ellipse1.png"
                   alt="Jfobusiness"
-                  className="w-12 h-12 rounded-full mr-4"
+                  width={48}
+                  height={48}
+                  className="rounded-full mr-4"
                 />
                 <h4 className="text-lg text-[#FFFFFF] font-semibold">
                   Jfobusiness
@@ -108,10 +113,12 @@ const Review = () => {
           >
             <div className="rounded-xl shadow-test p-4 bg-[#222222]">
               <div className="flex items-center mb-4">
-                <img
+                <Image
                   src="/img/Ellipse1.png"
                   alt="Joe"
-                  className="w-12 h-12 rounded-full mr-4"
+                  width={48}
+                  height={48}
+                  className="rounded-full mr-4"
                 />
                 <h4 className="text-lg text-[#FFFFFF] font-semibold">
                   Joeyshortform
@@ -123,13 +130,16 @@ const Review = () => {
                 mentors to help you out with any questions you have
               </p>
             </div>
-            <div className="rounded-xl shadow-test p-4 bg-[#222222]">
+            <div className="rounded-xl mb-0 sm:mb-4 md:mb-0 shadow-test p-4 bg-[#222222]">
               <div className="flex items-center mb-4">
-                <img
+                <Image
                   src="/img/Ellipse1.png"
                   alt="Jbuk"
-                  className="w-12 h-12 rounded-full mr-4"
+                  width={48}
+                  height={48}
+                  className="rounded-full mr-4"
                 />
+
                 <h4 className="text-lg text-[#FFFFFF] font-semibold">Jbuk</h4>
               </div>
               <p className="text-white font-semibold">
@@ -147,11 +157,14 @@ const Review = () => {
           >
             <div className="rounded-xl shadow-test bg-[#222222] p-4">
               <div className="flex items-center mb-4">
-                <img
+                <Image
                   src="/img/Ellipse1.png"
                   alt="Is069"
-                  className="w-12 h-12 rounded-full mr-4"
+                  width={48}
+                  height={48}
+                  className="rounded-full mr-4"
                 />
+
                 <h4 className="text-lg text-[#FFFFFF] font-semibold">Is069</h4>
               </div>
               <p className="text-white font-semibold">
@@ -166,11 +179,14 @@ const Review = () => {
             </div>
             <div className="rounded-xl shadow-test p-4 bg-[#222222]">
               <div className="flex items-center mb-4">
-                <img
+                <Image
                   src="/img/Ellipse1.png"
-                  alt="Jfobusiness"
-                  className="w-12 h-12 rounded-full mr-4"
+                  alt="Malik1960"
+                  width={48}
+                  height={48}
+                  className="rounded-full mr-4"
                 />
+
                 <h4 className="text-lg text-[#FFFFFF] font-semibold">
                   Malik1960
                 </h4>

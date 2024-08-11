@@ -43,8 +43,11 @@ const Price2 = () => {
               <li>- Access to private marketplace</li>
               <li>- Access to safe middleman service</li>
             </ul>
-            <div className="flex flex-col sm:flex-row justify-between items-center mt-6 sm:mt-10">
-              <Button className="bg-gray-300 text-black text-lg sm:text-xl py-4 sm:py-8 px-6 sm:px-8 rounded-xl sm:rounded-2xl w-full sm:w-auto mr-0 sm:mr-4 mb-4 sm:mb-0">
+            <div className="flex justify-between items-center mt-10">
+              <Button
+                variant="outline"
+                className="bg-gray-300 text-black text-xl py-8 px-8 rounded-2xl w-full mr-4"
+              >
                 Join now
               </Button>
               <div className="text-right">

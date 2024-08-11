@@ -5,8 +5,8 @@ import React from "react";
 
 const Cards = () => {
   return (
-    <section className="pb-16">
-      <MaxWidthWrapper className="text-white py-16">
+    <section className="pb-4">
+      <MaxWidthWrapper className="text-white py-8">
         <h2 className="text-center text-5xl font-semibold mb-8">
           What the course includes
         </h2>

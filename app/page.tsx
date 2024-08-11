@@ -9,6 +9,7 @@ import FramerGraphs from "./sections/FramerGraphs";
 import Hero from "./sections/Hero";
 import Pricing from "./sections/Pricing";
 import FAQ from "./sections/FAQ";
+import Footer from "./sections/Footer";
 
 const page = () => {
   return (
@@ -26,6 +27,7 @@ const page = () => {
       <section id="FAQ">
         <FAQ />
       </section>
+      <Footer />
     </div>
   );
 };

@@ -54,7 +54,7 @@ const Card: React.FC<CardProps> = ({
       variants={cardVariants}
       initial="hidden"
       animate={controls}
-      className="relative flip-card w-[260px] h-[220px] sm:w-[300px] sm:h-[260px] lg:w-[365px] lg:h-[311px] px-6 sm:px-0"
+      className="relative flip-card w-[260px] h-[220px] sm:w-[300px] sm:h-[260px] px-6 sm:px-0"
     >
       <div className="flip-card-inner w-full h-full">
         <div className="flip-card-front w-full h-full p-6 border-4 border-blue-500 text-center rounded-xl shadow-inBox bg-black">
