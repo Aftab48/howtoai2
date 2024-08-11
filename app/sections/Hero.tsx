@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import React from "react";
-import { Button } from "../../components/ui/button";
-import MaxWidthWrapper from "../../components/mww";
+import { Button } from "@/components/ui/button";
+import MaxWidthWrapper from "@/components/mww";
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -20,15 +20,15 @@ const Hero = () => {
         </div>
 
         {/* Video Section with Fast Blue Glowing Shadow */}
-        <div className="relative w-full h-[500px] mt-10 z-10 overflow-hidden ">
+        <div className="relative w-full h-[500px] mt-10 z-10 overflow-hidden">
           <motion.div
-            className="absolute inset-0 "
+            className="absolute inset-0"
             initial={{
               opacity: 1,
               boxShadow: "0px 0px 0px rgba(0, 0, 255, 0)",
             }}
             animate={{
-              opacity: [1, 0.3, 1],
+              opacity: [1, 0.5, 1],
               boxShadow: [
                 "0px 0px 0px rgba(0, 0, 255, 0)",
                 "0px 0px 100px rgba(0, 0, 255, 1)",
@@ -37,7 +37,7 @@ const Hero = () => {
             }}
             transition={{
               repeat: Infinity,
-              duration: 2.4, // Reduced duration for a faster animation
+              duration: 3,
               ease: "easeInOut",
             }}
           >
@@ -45,8 +45,13 @@ const Hero = () => {
               src="/img/hero-bg.png"
               alt="heroimg"
               fill
-              className="z-5 w-full h-full object-cover"
+              className="z-5 w-full h-full object-cover "
             />
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-black to-transparent"></div>
+              <div className="absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-black to-transparent"></div>
+              <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black to-transparent"></div>
+            </div>
           </motion.div>
 
           {/* Centered Image Over Video */}
@@ -64,16 +69,10 @@ const Hero = () => {
         {/* Buttons and Additional Content Section */}
         <div className="flex flex-col items-center justify-center z-20 pt-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 text-center gap-20 z-20 mt-10">
-            <Button
-              variant="outline"
-              className="px-7 w-64 h-14 py-2 mx-2 bg-white text-xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl"
-            >
+            <Button className="px-7 w-64 h-14 py-2 mx-2 bg-white text-xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl">
               Learn more
             </Button>
-            <Button
-              variant="outline"
-              className="px-7 w-64 h-14 py-2 mx-2 bg-white text-xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl"
-            >
+            <Button className="px-7 w-64 h-14 py-2 mx-2 bg-white text-xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl">
               Join now
             </Button>
           </div>
