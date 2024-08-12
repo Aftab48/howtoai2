@@ -24,7 +24,7 @@ const Price2 = () => {
     >
       <MaxWidthWrapper className="flex flex-col sm:flex-row items-center justify-center">
         <div className="relative flex items-center justify-between w-full max-w-4xl sm:max-w-6xl p-4 sm:p-10 bg-gradient-to-b rounded-lg sm:rounded-xl shadow-lg">
-          <div className="mr-auto border border-b rounded-2xl sm:rounded-3xl border-[#000] relative shadow-priceBlack bg-black w-full sm:w-[600px] text-white p-6 sm:p-10">
+          <div className="ml-[50px] max-lg:ml-0 mr-auto border border-b rounded-2xl sm:rounded-3xl border-[#000] relative shadow-priceBlack bg-black w-full sm:w-[600px] text-white p-6 sm:p-10">
             <h2 className="font-bold text-2xl sm:text-4xl mb-4 sm:mb-6">
               Growth Program
             </h2>
@@ -46,13 +46,15 @@ const Price2 = () => {
             <div className="flex justify-between items-center mt-10">
               <Button
                 variant="outline"
-                className="bg-gray-300 text-black text-xl py-8 px-8 rounded-2xl w-full mr-4"
+                className="bg-gray-300 text-black text-xl py-8 px-8 rounded-2xl w-3/4 mr-4"
               >
                 Join now
               </Button>
               <div className="text-right">
-                <h3 className="text-xl sm:text-2xl font-bold">$20/week</h3>
-                <p className="text-lg sm:text-xl">starting price</p>
+                <h3 className="text-xl sm:text-xl font-bold text-center">
+                  $20/week
+                </h3>
+                <p className="text-md sm:text-md text-center">starting price</p>
               </div>
             </div>
           </div>
@@ -61,7 +63,7 @@ const Price2 = () => {
             alt="Mentor"
             width={555}
             height={400}
-            className="absolute hidden xl:block lg:right-[9.8rem] bottom-11 object-contain z-10"
+            className="absolute hidden xl:block lg:right-[5.8rem] bottom-11 object-contain z-10"
           />
         </div>
       </MaxWidthWrapper>

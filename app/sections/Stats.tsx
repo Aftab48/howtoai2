@@ -10,16 +10,16 @@ const Stats = () => {
           <div className="flex flex-col md:space-x-10 lg:space-x-20 sm:flex-row justify-center items-center text-white py-12">
             {infoData.map((item, index) => (
               <React.Fragment key={index}>
-                <div className="text-center space-x-4 px-4">
-                  <p className="text-4xl lg:text-6xl font-bold">
+                <div className="text-center gap-x-4 px-4">
+                  <p className="text-4xl lg:text-8xl font-semibold">
                     {item.value}
                     {index === 1 && (
-                      <span className="text-2xl font-light text-muted">
+                      <span className="text-2xl pl-1 font-light text-muted">
                         hrs
                       </span>
                     )}
                   </p>
-                  <p className="mt-2 font-semibold text-xl">{item.label}</p>
+                  <p className="mt-2 text-2xl">{item.label}</p>
                 </div>
                 {index < infoData.length - 1 && (
                   <>

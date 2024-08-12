@@ -69,10 +69,16 @@ const Hero = () => {
         {/* Buttons and Additional Content Section */}
         <div className="flex flex-col items-center justify-center z-20 pt-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 text-center gap-20 z-20 mt-10">
-            <Button className="px-7 w-64 h-14 py-2 mx-2 bg-white text-xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl">
+            <Button
+              variant="outline"
+              className="px-7 w-64 h-14 py-2 mx-2 bg-white text-xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl"
+            >
               Learn more
             </Button>
-            <Button className="px-7 w-64 h-14 py-2 mx-2 bg-white text-xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl">
+            <Button
+              variant="outline"
+              className="px-7 w-64 h-14 py-2 mx-2 bg-white text-xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl"
+            >
               Join now
             </Button>
           </div>

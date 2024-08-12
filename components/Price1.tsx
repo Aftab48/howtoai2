@@ -56,13 +56,15 @@ const Price1 = () => {
             <div className="flex justify-between items-center mt-10">
               <Button
                 variant="outline"
-                className="bg-gray-300 text-black text-xl py-8 px-8 rounded-2xl w-full mr-4"
+                className="bg-gray-300 text-black text-xl py-8 px-8 rounded-2xl w-3/4 mr-4"
               >
                 Coming Soon
               </Button>
               <div className="text-right">
-                <h3 className="text-xl sm:text-2xl font-bold">$2999/3</h3>
-                <p className="text-lg sm:text-xl">month</p>
+                <h3 className="text-xl sm:text-xl font-bold text-center">
+                  $2999/3
+                </h3>
+                <p className="text-md sm:text-md text-center">month</p>
               </div>
             </div>
           </div>

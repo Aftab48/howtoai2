@@ -48,10 +48,10 @@ const Review = () => {
   return (
     <section className="h-full mt-16 text-white">
       <MaxWidthWrapper className="text-center">
-        <h2 className="text-white text-4xl">
+        <h2 className="text-white text-6xl p-6">
           See What Others have to say
           <br />
-          about our course
+          <span>about our course</span>
         </h2>
         <motion.div
           ref={ref}
@@ -61,11 +61,11 @@ const Review = () => {
           variants={parentVariants}
           initial="hidden"
           animate={controls}
-          className="grid grid-cols-1 lg:grid-cols-3 justify-center gap-x-4 p-10"
+          className="grid grid-cols-1 lg:grid-cols-3 justify-center gap-x-6 p-10"
         >
           <motion.div
             variants={childVariants}
-            className="grid-s-f p-4 pb-0 sm:p-0 md:p-4 md:pb-0 lg:p-0 gap-4"
+            className="grid-s-f p-4 pb-0 sm:p-0 md:p-4 md:pb-0 lg:p-0 gap-6"
           >
             <div className="rounded-xl p-4 shadow-test bg-[#222222]">
               <div className="flex items-center mb-4">
@@ -109,7 +109,7 @@ const Review = () => {
           </motion.div>
           <motion.div
             variants={childVariants}
-            className="grid-f-f p-4 pb-0 sm:p-0 md:p-4 md:pb-0 lg:p-0 gap-4"
+            className="grid-f-f p-4 pb-0 sm:p-0 md:p-4 md:pb-0 lg:p-0 gap-6"
           >
             <div className="rounded-xl shadow-test p-4 bg-[#222222]">
               <div className="flex items-center mb-4">
@@ -153,7 +153,7 @@ const Review = () => {
           </motion.div>
           <motion.div
             variants={childVariants}
-            className="grid-s-f p-4 sm:p-0 md:p-4 md:pb-0 lg:p-0 gap-4"
+            className="grid-s-f p-4 sm:p-0 md:p-4 md:pb-0 lg:p-0 gap-6"
           >
             <div className="rounded-xl shadow-test bg-[#222222] p-4">
               <div className="flex items-center mb-4">
