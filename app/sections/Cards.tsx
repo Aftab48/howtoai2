@@ -19,9 +19,9 @@ const Cards = () => {
                 title={card.title}
                 description={card.description}
                 backContent={card.backContent}
+                size={index === 5 ? card.size : undefined}
               />
             ))}
-              
           </div>
         </div>
       </MaxWidthWrapper>

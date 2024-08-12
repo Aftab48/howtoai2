@@ -20,52 +20,64 @@ const FramerGraphs: React.FC = () => {
             initial={{ x: 0 }}
             animate={{ x: "-100%" }}
             transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-            className="grid track grid-cols-3 flex-shrink-0"
+            className="flex flex-nowrap"
           >
-            <Image
-              src="/img/analytics1.png"
-              alt="Analytics 1"
-              height={286}
-              width={463}
-            />
-            <Image
-              src="/img/analytics1.png"
-              alt="Analytics 1"
-              height={286}
-              width={463}
-            />
-            <Image
-              src="/img/analytics1.png"
-              alt="Analytics 1"
-              height={286}
-              width={463}
-            />
+            <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
+              <Image
+                src="/graph/g1.png"
+                alt="Analytics 1"
+                width={463}
+                height={286}
+              />
+            </div>
+            <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
+              <Image
+                src="/img/analytics1.png"
+                alt="Analytics 1"
+                width={463}
+                height={286}
+              />
+            </div>
+            <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
+              <Image
+                src="/graph/g2.png"
+                alt="Analytics 1"
+                width={463}
+                height={286}
+              />
+            </div>
           </motion.div>
 
           <motion.div
             initial={{ x: 0 }}
             animate={{ x: "-100%" }}
             transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-            className="grid track grid-cols-3 flex-shrink-0"
+            className="flex flex-nowrap"
           >
-            <Image
-              src="/img/analytics1.png"
-              alt="Analytics 1"
-              height={286}
-              width={463}
-            />
-            <Image
-              src="/img/analytics1.png"
-              alt="Analytics 1"
-              height={286}
-              width={463}
-            />
-            <Image
-              src="/img/analytics1.png"
-              alt="Analytics 1"
-              height={286}
-              width={463}
-            />
+            <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
+              <Image
+                src="/graph/g5.png"
+                alt="Analytics 1"
+                width={463}
+                height={286}
+              />
+            </div>
+            <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
+              <Image
+                src="/graph/g1.png"
+                alt="Analytics 1"
+                width={463}
+                height={286}
+              />
+            </div>
+            <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
+              <Image
+                src="/img/analytics1.png"
+                alt="Analytics 1"
+                width={463}
+                height={286}
+              />
+            </div>
           </motion.div>
 
           <div className="absolute inset-0 pointer-events-none">
@@ -79,52 +91,64 @@ const FramerGraphs: React.FC = () => {
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-            className="grid track grid-cols-3 flex-shrink-0"
+            className="flex flex-nowrap"
           >
-            <Image
-              src="/img/analytics1.png"
-              alt="Analytics 1"
-              height={286}
-              width={463}
-            />
-            <Image
-              src="/img/analytics1.png"
-              alt="Analytics 1"
-              height={286}
-              width={463}
-            />
-            <Image
-              src="/img/analytics1.png"
-              alt="Analytics 1"
-              height={286}
-              width={463}
-            />
+            <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
+              <Image
+                src="/graph/g2.png"
+                alt="Analytics 1"
+                width={463}
+                height={286}
+              />
+            </div>
+            <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
+              <Image
+                src="/graph/g5.png"
+                alt="Analytics 1"
+                width={463}
+                height={286}
+              />
+            </div>
+            <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
+              <Image
+                src="/graph/g1.png"
+                alt="Analytics 1"
+                width={463}
+                height={286}
+              />
+            </div>
           </motion.div>
 
           <motion.div
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-            className="grid track grid-cols-3 flex-shrink-0"
+            className="flex flex-nowrap"
           >
-            <Image
-              src="/img/analytics1.png"
-              alt="Analytics 1"
-              height={286}
-              width={463}
-            />
-            <Image
-              src="/img/analytics1.png"
-              alt="Analytics 1"
-              height={286}
-              width={463}
-            />
-            <Image
-              src="/img/analytics1.png"
-              alt="Analytics 1"
-              height={286}
-              width={463}
-            />
+            <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
+              <Image
+                src="/img/analytics1.png"
+                alt="Analytics 1"
+                width={463}
+                height={286}
+              />
+            </div>
+            <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
+              <Image
+                src="/graph/g2.png"
+                alt="Analytics 1"
+                width={463}
+                height={286}
+              />
+            </div>
+            <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
+              <Image
+                src="/graph/g5.png"
+                alt="Analytics 1"
+                width={463}
+                height={286}
+              />
+            </div>
           </motion.div>
 
           <div className="absolute inset-0 pointer-events-none">

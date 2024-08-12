@@ -10,16 +10,20 @@ const Stats = () => {
           <div className="flex flex-col sm:flex-row items-center justify-between text-white py-12">
             {infoData.map((item, index) => (
               <React.Fragment key={index}>
-                <div className="flex flex-col items-center text-center px-4">
+                <div
+                  className={`flex flex-col items-center text-center px-4 ${
+                    index === 0 ? "flex-shrink-0" : "flex-grow"
+                  }`}
+                >
                   <p className="text-4xl font lg:text-8xl font-semibold flex items-center">
                     {item.value}
                     {index === 1 && (
-                      <span className="text-xl lg:text-3xl pl-1 font-medium">
+                      <span className="text-xl lg:text-3xl pl-1 font-medium ">
                         hrs
                       </span>
                     )}
                     {index === 2 && (
-                      <span className="text-3xl lg:text-6xl pl-1 font-medium">
+                      <span className="text-3xl lg:text-6xl pl-1 font-medium ">
                         +
                       </span>
                     )}
@@ -27,10 +31,10 @@ const Stats = () => {
                   <p className="mt-2 text-2xl">{item.label}</p>
                 </div>
                 {index < infoData.length - 1 && (
-                  <div className="flex justify-center items-center">
+                  <>
                     <div className="h-40 hidden sm:block border-l-2 border-blue-500 mx-4" />
                     <div className="w-40 block sm:hidden border-t-2 border-blue-500 my-4" />
-                  </div>
+                  </>
                 )}
               </React.Fragment>
             ))}

@@ -14,6 +14,7 @@ interface CardProps {
   title: string;
   description: string;
   backContent: string;
+  size?: number;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -21,6 +22,7 @@ const Card: React.FC<CardProps> = ({
   title,
   description,
   backContent,
+  size = 42,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const controls = useAnimation();
@@ -63,8 +65,8 @@ const Card: React.FC<CardProps> = ({
               <Image
                 src={imgsrc}
                 alt={title}
-                width={42}
-                height={42}
+                width={size}
+                height={size}
                 className="mx-auto"
               />
             </div>
