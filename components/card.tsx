@@ -63,8 +63,8 @@ const Card: React.FC<CardProps> = ({
               <Image
                 src={imgsrc}
                 alt={title}
-                width={67}
-                height={67}
+                width={42}
+                height={42}
                 className="mx-auto"
               />
             </div>

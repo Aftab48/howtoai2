@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import React from "react";
-import { Button } from "@/components/ui/button";
-import MaxWidthWrapper from "@/components/mww";
+import { Button } from "../../components/ui/button";
+import MaxWidthWrapper from "../../components/mww";
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -48,8 +48,8 @@ const Hero = () => {
               className="z-5 w-full h-full object-cover "
             />
             <div className="absolute inset-0 pointer-events-none">
-              <div className="absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-black to-transparent"></div>
-              <div className="absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-black to-transparent"></div>
+              <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-black to-transparent"></div>
+              <div className="absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-black to-transparent"></div>
               <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black to-transparent"></div>
             </div>
           </motion.div>
