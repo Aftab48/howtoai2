@@ -20,13 +20,9 @@ const page = () => {
       <Graph />
       <Cards />
       <FramerGraphs />
-      <section className="h-full" id="PRICING">
-        <Pricing />
-      </section>
+      <Pricing />
       <Review />
-      <section id="FAQ">
-        <FAQ />
-      </section>
+      <FAQ />
       <Footer />
     </div>
   );

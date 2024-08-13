@@ -5,7 +5,7 @@ import React from "react";
 
 const Cards = () => {
   return (
-    <section className="pb-4">
+    <section className="pb-24">
       <MaxWidthWrapper className="text-white">
         <h2 className="text-center text-5xl font-semibold mb-8">
           What the course includes

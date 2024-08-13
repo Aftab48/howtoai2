@@ -4,13 +4,13 @@ import React from "react";
 
 const Stats = () => {
   return (
-    <section className="relative">
+    <section className="relative" id="STATS">
       <MaxWidthWrapper className="relative pb-5 sm:pb-10 pt-2 sm:pt-5 md:pt-10 text-white flex flex-col justify-center z-30">
         <div className="px-16">
           <div className="flex flex-col sm:flex-row items-center justify-between text-white py-12">
             {infoData.map((item, index) => (
               <React.Fragment key={index}>
-                <div className="flex flex-col items-center text-center px-4">
+                <div className="flex flex-col items-center text-center px-1 xl:px-4">
                   <p className="text-4xl font lg:text-8xl font-semibold flex items-center">
                     {item.value}
                     {index === 1 && (

@@ -10,7 +10,7 @@ import { faqData } from "@/constants";
 
 const FAQ = () => {
   return (
-    <div>
+    <div id="FAQ">
       <MaxWidthWrapper className="p-10 text-white">
         <h2 className="text-4xl font-medium mb-7 text-center">
           Frequently Asked Questions

@@ -1,4 +1,7 @@
+"use client";
+
 import MaxWidthWrapper from "@/components/mww";
+import scrollToSection from "@/components/scroll";
 import Link from "next/link";
 import React from "react";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
@@ -24,10 +27,18 @@ const Navbar = () => {
 
           {/*right*/}
           <div className="grid grid-cols-2 items-end justify-end gap-4">
-            <Link href="#FAQ" className="text-md text-white cursor-pointer">
+            <Link
+              href={"/"}
+              onClick={() => scrollToSection("FAQ")}
+              className="text-md text-white cursor-pointer"
+            >
               F&Q
             </Link>
-            <Link href="#PRICING" className="text-md text-white cursor-pointer">
+            <Link
+              href={"/"}
+              onClick={() => scrollToSection("PRICING")}
+              className="text-md text-white cursor-pointer"
+            >
               Pricing
             </Link>
           </div>

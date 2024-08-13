@@ -7,7 +7,7 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 interface CardProps {
   imgsrc: string;
@@ -26,16 +26,40 @@ const Card: React.FC<CardProps> = ({
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const controls = useAnimation();
+  const [isPortrait, setIsPortrait] = useState<boolean>(false);
+
+  const updateOrientation = () => {
+    setIsPortrait(window.innerHeight > window.innerWidth);
+  };
+
+  useEffect(() => {
+    updateOrientation();
+
+    window.addEventListener("resize", updateOrientation);
+
+    return () => {
+      window.removeEventListener("resize", updateOrientation);
+    };
+  }, []);
+
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0.1 0.9", "0.5 1"],
+    offset: isPortrait ? ["0.2 0.8", "0.4 1"] : ["0.1 0.9", "0.5 1"],
   });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if (latest > 0.1) {
-      controls.start("visible");
+    if (isPortrait) {
+      if (latest > 0.2) {
+        controls.start("hidden");
+      } else {
+        controls.start("visible");
+      }
     } else {
-      controls.start("hidden");
+      if (latest > 0.1) {
+        controls.start("visible");
+      } else {
+        controls.start("hidden");
+      }
     }
   });
 
@@ -45,7 +69,8 @@ const Card: React.FC<CardProps> = ({
       opacity: 1,
       rotateY: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.8,
+        ease: "easeInOut",
       },
     },
   };
@@ -56,7 +81,7 @@ const Card: React.FC<CardProps> = ({
       variants={cardVariants}
       initial="hidden"
       animate={controls}
-      className="relative flip-card w-[260px] h-[220px] sm:w-[300px] sm:h-[260px] px-6 sm:px-0"
+      className="relative flip-card w-[260px] h-[220px] sm:w-[300px] sm:h-[260px] px-6 sm:px-0 will-change-transform"
     >
       <div className="flip-card-inner w-full h-full">
         <div className="flip-card-front w-full h-full p-6 border-4 border-blue-500 text-center rounded-xl shadow-inBox bg-black">

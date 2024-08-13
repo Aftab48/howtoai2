@@ -4,7 +4,7 @@ import React from "react";
 
 const Pricing = () => {
   return (
-    <div>
+    <div className="h-full" id="PRICING">
       <Price1 />
       <Price2 />
     </div>

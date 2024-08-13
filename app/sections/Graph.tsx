@@ -1,10 +1,13 @@
+"use client";
+
 import MaxWidthWrapper from "@/components/mww";
+import scrollToSection from "@/components/scroll";
 import { Button } from "@/components/ui/button";
 import React from "react";
 
 const Graph = () => {
   return (
-    <section className="relative w-full h-[69vh] md:h-screen">
+    <section className="relative w-full h-[66.5vh] md:h-[68.5vh] xl:h-screen">
       <MaxWidthWrapper className="relative w-full h-full">
         <div className="relative w-full h-full overflow-hidden">
           {/* Video Background with Enhanced Blur and Fade */}
@@ -29,9 +32,16 @@ const Graph = () => {
           </video>
 
           {/* Content Overlay */}
-          <div className="absolute inset-0 flex flex-col justify-start items-start space-y-6 p-10 z-10 pt-[10vh] md:pt-[17vh]">
+          <div
+            className="absolute inset-0 flex flex-col justify-start items-start space-y-6 p-10 z-10 pt-[10vh] md:pt-[26vh]
+          xl:pt-[17vh]"
+          >
             <span className="text-white text-5xl">3 Spots left</span>
-            <Button className="text-white w-64 h-14 text-2xl bg-custom-button-1 hover:bg-blue-700 transition delay-150 rounded-xl">
+            <Button
+              variant="outline"
+              onClick={() => scrollToSection("PRICING")}
+              className="text-white w-64 h-14 text-2xl bg-custom-button-1 hover:bg-blue-700 transition delay-150 rounded-xl"
+            >
               Join Now
             </Button>
           </div>
