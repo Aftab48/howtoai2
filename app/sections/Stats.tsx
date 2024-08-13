@@ -5,7 +5,7 @@ import React from "react";
 const Stats = () => {
   return (
     <section className="relative" id="STATS">
-      <MaxWidthWrapper className="relative pb-5 sm:pb-10 pt-2 sm:pt-5 md:pt-10 text-white flex flex-col justify-center z-30">
+      <MaxWidthWrapper className="relative pb-0 sm:pt-5 md:pt-10 text-white flex flex-col justify-center z-30">
         <div className="px-16">
           <div className="flex flex-col sm:flex-row items-center justify-between text-white py-12">
             {infoData.map((item, index) => (
@@ -16,11 +16,6 @@ const Stats = () => {
                     {index === 1 && (
                       <span className="text-xl lg:text-3xl pl-1 font-medium">
                         hrs
-                      </span>
-                    )}
-                    {index === 2 && (
-                      <span className="text-3xl lg:text-6xl pl-1 font-medium">
-                        +
                       </span>
                     )}
                   </p>

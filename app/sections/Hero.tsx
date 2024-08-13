@@ -11,7 +11,7 @@ import { TextEffect } from "@/components/ui/TextEffect";
 const Hero = () => {
   return (
     <section className="relative">
-      <MaxWidthWrapper className="relative pb-24 xl:pb-12 pt-10 text-white flex flex-col justify-center">
+      <MaxWidthWrapper className="relative pb-2 pt-10 text-white flex flex-col justify-center">
         {/* Header and Title Section */}
         <div className="z-30 flex flex-col items-center">
           <TextEffect
