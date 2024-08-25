@@ -31,7 +31,33 @@ const Price1 = () => {
             height={400}
             className="absolute left-0 hidden xl:block bottom-4 object-contain scale-x-[-1] z-10"
           />
-          <div className="ml-auto border border-b rounded-2xl sm:rounded-3xl border-[#38B6FF] relative shadow-price bg-black w-full sm:w-[600px] text-white p-6 sm:p-10">
+          <motion.div
+            initial={{
+              borderImage:
+                "linear-gradient(90deg, rgba(56,182,255,0) 0%, rgba(56,182,255,0) 100%) 1",
+            }}
+            animate={{
+              borderImage: [
+                "linear-gradient(90deg, rgba(56,182,255,1) 0%, rgba(56,182,255,1) 5%, rgba(56,182,255,0) 10%) 1",
+                "linear-gradient(180deg, rgba(56,182,255,1) 0%, rgba(56,182,255,1) 5%, rgba(56,182,255,0) 10%) 1",
+                "linear-gradient(270deg, rgba(56,182,255,1) 0%, rgba(56,182,255,1) 5%, rgba(56,182,255,0) 10%) 1",
+                "linear-gradient(360deg, rgba(56,182,255,1) 0%, rgba(56,182,255,1) 5%, rgba(56,182,255,0) 10%) 1",
+                "linear-gradient(450deg, rgba(56,182,255,1) 0%, rgba(56,182,255,1) 5%, rgba(56,182,255,0) 10%) 1",
+              ],
+            }}
+            transition={{
+              repeat: Infinity,
+              duration: 6,
+              ease: "linear",
+            }}
+            className="ml-auto shadow-price rounded-2xl sm:rounded-3xl relative bg-black w-full sm:w-[600px] text-white p-6 sm:p-10 border-4"
+            style={{
+              borderImageSlice: 1,
+              borderWidth: "7px",
+              borderRadius: "14px",
+              overflow: "hidden",
+            }}
+          >
             <h2 className="font-bold text-2xl sm:text-4xl mb-4 sm:mb-6">
               Full Mentorship Program
             </h2>
@@ -67,7 +93,7 @@ const Price1 = () => {
                 <p className="text-md sm:text-md text-center">month</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </MaxWidthWrapper>
     </motion.section>

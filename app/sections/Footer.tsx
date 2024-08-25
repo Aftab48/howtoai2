@@ -17,14 +17,26 @@ const Footer = () => {
             Made by Aftab
           </Link>
           <div className="flex pl-6 sm:pl-0 gap-x-6 justify-center sm:justify-end pr-6">
-            <Link href="/">
-              <FaYoutube size={25} />
+            <Link
+              href="https://www.youtube.com/channel/UCCSwbTR-seWT2cn9nVMp2Fw"
+              target="_blank"
+            >
+              <FaYoutube
+                size={30}
+                className="text-3xl text-white cursor-pointer"
+              />
             </Link>
-            <Link href="/">
-              <FaXTwitter size={25} />
+            <Link href="https://x.com/grundstromleo" target="_blank">
+              <FaXTwitter
+                size={30}
+                className="text-3xl text-white cursor-pointer"
+              />
             </Link>
-            <Link href="/">
-              <FaInstagram size={25} />
+            <Link href="https://www.instagram.com/howtoaiyt/" target="_blank">
+              <FaInstagram
+                size={30}
+                className="text-3xl text-white cursor-pointer"
+              />
             </Link>
           </div>
         </div>

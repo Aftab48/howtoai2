@@ -5,7 +5,7 @@ import scrollToSection from "@/components/scroll";
 import Link from "next/link";
 import React from "react";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaDiscord, FaXTwitter } from "react-icons/fa6";
 
 const Navbar = () => {
   return (
@@ -14,14 +14,26 @@ const Navbar = () => {
         <div className="flex h-14 items-center justify-between">
           {/*left*/}
           <div className="grid grid-cols-3 gap-4">
-            <Link href="/">
-              <FaYoutube className="text-3xl text-white cursor-pointer" />
+            <Link
+              href="https://www.youtube.com/channel/UCCSwbTR-seWT2cn9nVMp2Fw"
+              target="_blank"
+            >
+              <FaYoutube
+                size={30}
+                className="text-3xl text-white cursor-pointer"
+              />
             </Link>
-            <Link href="/">
-              <FaXTwitter className="text-3xl text-white cursor-pointer" />
+            <Link href="https://x.com/grundstromleo" target="_blank">
+              <FaXTwitter
+                size={30}
+                className="text-3xl text-white cursor-pointer"
+              />
             </Link>
-            <Link href="/">
-              <FaInstagram className="text-3xl text-white cursor-pointer" />
+            <Link href="https://www.instagram.com/howtoaiyt/" target="_blank">
+              <FaInstagram
+                size={30}
+                className="text-3xl text-white cursor-pointer"
+              />
             </Link>
           </div>
 

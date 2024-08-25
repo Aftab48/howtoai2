@@ -32,7 +32,7 @@ const config = {
       boxShadow: {
         inBox: "inset 5px 12px 24px -15px rgba(74,144,226,1)",
         test: "-2px -2px 17px 15px rgba(0,0,0,0.26) inset",
-        price: "0px 0px 42px 46px rgba(56,182,255,0.21) inset",
+        price: "0px 0px 22px 26px rgba(56,182,255,0.21) inset",
         priceBlack: "0px 0px 42px 46px rgba(200, 200, 200, 0.15) inset",
       },
       colors: {

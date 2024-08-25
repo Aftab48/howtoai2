@@ -3,14 +3,23 @@
 import MaxWidthWrapper from "@/components/mww";
 import scrollToSection from "@/components/scroll";
 import { Button } from "@/components/ui/button";
-import React from "react";
+import { useEffect, useState } from "react";
 
 const Graph = () => {
+  const [randomNumber, setRandomNumber] = useState<number | null>(null);
+
+  useEffect(() => {
+    const getRandomNumber = (min: number, max: number): number => {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+
+    setRandomNumber(getRandomNumber(1, 6));
+  }, []);
+
   return (
     <section className="relative w-full h-[66.5vh] md:h-[68.5vh] xl:h-screen">
       <MaxWidthWrapper className="relative w-full h-full">
         <div className="relative w-full h-full overflow-hidden">
-          {/* Video Background with Enhanced Blur and Fade */}
           <video
             autoPlay
             loop
@@ -31,12 +40,15 @@ const Graph = () => {
             Your browser does not support the video tag.
           </video>
 
-          {/* Content Overlay */}
           <div
             className="absolute inset-0 flex flex-col justify-start items-start space-y-6 p-10 z-10 pt-[10vh] md:pt-[26vh]
           xl:pt-[17vh]"
           >
-            <span className="text-white text-5xl">3 Spots left</span>
+            <span className="text-white text-5xl">
+              {randomNumber !== null
+                ? `${randomNumber} Spots left`
+                : "Checking..."}
+            </span>
             <Button
               variant="outline"
               onClick={() => scrollToSection("PRICING")}
