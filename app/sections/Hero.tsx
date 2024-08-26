@@ -29,7 +29,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="relative w-full h-[500px] mt-10 z-10 overflow-hidden">
+        <div className="relative w-full h-[550px] mt-10 z-10 overflow-hidden">
           <motion.div
             className="absolute inset-0"
             initial={{
@@ -51,8 +51,8 @@ const Hero = () => {
             }}
           >
             <Image
-              src="/img/hero-bg.png"
-              alt="heroimg"
+              src="/img/test2.jpeg"
+              alt="heroimg-bg"
               fill
               className="z-5 w-full h-full object-cover"
               quality={100}

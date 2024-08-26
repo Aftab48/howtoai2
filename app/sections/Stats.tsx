@@ -5,16 +5,16 @@ import React from "react";
 const Stats = () => {
   return (
     <section className="relative" id="STATS">
-      <MaxWidthWrapper className="relative pb-0 sm:pt-5 md:pt-10 text-white flex flex-col justify-center z-30">
+      <MaxWidthWrapper className="relative pb-0 sm:pt-5 md:pt-10 text-white flex flex-col justify-center z-30 max-w-screen-xl">
         <div className="px-16">
           <div className="flex flex-col sm:flex-row items-center justify-between text-white py-12 font-poppins">
             {infoData.map((item, index) => (
               <React.Fragment key={index}>
                 <div className="flex flex-col items-center text-center px-1 xl:px-4">
-                  <p className="text-4xl font lg:text-8xl font-semibold flex items-center">
+                  <p className="text-4xl font lg:text-7xl font-semibold flex items-center">
                     {item.value}
                     {index === 1 && (
-                      <span className="text-xl lg:text-3xl pl-1 font-medium">
+                      <span className="text-xl lg:text-3xl pt-[30px] pl-1 font-medium">
                         hrs
                       </span>
                     )}

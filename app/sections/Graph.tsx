@@ -18,7 +18,7 @@ const Graph = () => {
 
   return (
     <section className="relative w-full h-[66.5vh] md:h-[68.5vh] xl:h-screen">
-      <MaxWidthWrapper className="relative w-full h-full">
+      <MaxWidthWrapper className="relative max-w-screen-xl w-full h-full">
         <div className="relative w-full h-full overflow-hidden">
           <video
             autoPlay

@@ -31,18 +31,19 @@ const Price1 = () => {
             height={400}
             className="absolute left-0 hidden xl:block bottom-4 object-contain scale-x-[-1] z-10"
           />
+
           <motion.div
             initial={{
               borderImage:
-                "linear-gradient(90deg, rgba(56,182,255,0) 0%, rgba(56,182,255,0) 100%) 1",
+                "linear-gradient(90deg, rgba(59, 130, 246,0) 0%, rgba(59, 130, 246,0) 100%) 1",
             }}
             animate={{
               borderImage: [
-                "linear-gradient(90deg, rgba(56,182,255,1) 0%, rgba(56,182,255,1) 5%, rgba(56,182,255,0) 10%) 1",
-                "linear-gradient(180deg, rgba(56,182,255,1) 0%, rgba(56,182,255,1) 5%, rgba(56,182,255,0) 10%) 1",
-                "linear-gradient(270deg, rgba(56,182,255,1) 0%, rgba(56,182,255,1) 5%, rgba(56,182,255,0) 10%) 1",
-                "linear-gradient(360deg, rgba(56,182,255,1) 0%, rgba(56,182,255,1) 5%, rgba(56,182,255,0) 10%) 1",
-                "linear-gradient(450deg, rgba(56,182,255,1) 0%, rgba(56,182,255,1) 5%, rgba(56,182,255,0) 10%) 1",
+                "linear-gradient(90deg, rgba(59, 130, 246,1) 0%, rgba(59, 130, 246,1) 5%, rgba(59, 130, 246,0) 10%) 1",
+                "linear-gradient(180deg, rgba(59, 130, 246,1) 0%, rgba(59, 130, 246,1) 5%, rgba(59, 130, 246,0) 10%) 1",
+                "linear-gradient(270deg, rgba(59, 130, 246,1) 0%, rgba(59, 130, 246,1) 5%, rgba(59, 130, 246,0) 10%) 1",
+                "linear-gradient(360deg, rgba(59, 130, 246,1) 0%, rgba(59, 130, 246,1) 5%, rgba(59, 130, 246,0) 10%) 1",
+                "linear-gradient(450deg, rgba(59, 130, 246,1) 0%, rgba(59, 130, 246,1) 5%, rgba(59, 130, 246,0) 10%) 1",
               ],
             }}
             transition={{

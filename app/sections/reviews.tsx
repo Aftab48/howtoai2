@@ -80,7 +80,7 @@ const Review = () => {
                   Risky
                 </h4>
               </div>
-              <p className="text-white font-kanit font-medium">
+              <p className="text-white font-kanit font-light">
                 I joined the growth program about 1month ago, and already have
                 seen crazy results, I'm in the process of expanding on my
                 Instagram account, which I never would've even known could have
@@ -102,7 +102,7 @@ const Review = () => {
                   Jfobusiness
                 </h4>
               </div>
-              <p className="text-white font-kanit font-medium">
+              <p className="text-white font-kanit font-light">
                 THEY ARE HELPFUL AF BIG AHH VOUCH THEY ANSWER EACH AND EVERY
                 SINGLE ONE OF MY QUESTIONS AND THEY NEVER EVER LEAVE ME HANGING
                 FOR ANY QUESTIONS
@@ -126,7 +126,7 @@ const Review = () => {
                   Joeyshortform
                 </h4>
               </div>
-              <p className="text-white font-kanit font-medium">
+              <p className="text-white font-kanit font-light">
                 This is the best course I've joined and for the value they
                 provide in upgrade I have been in for a week and learning daily
                 mentors to help you out with any questions you have
@@ -146,7 +146,7 @@ const Review = () => {
                   Jbuk
                 </h4>
               </div>
-              <p className="text-white font-kanit font-medium">
+              <p className="text-white font-kanit font-light">
                 One week ago I was making an absolute 0 with my 40k Instagram
                 account until I got into one of the weekly calls in and I showed
                 my account to @Leo | howtoai and @Mason | Chief Mentor, they
@@ -173,7 +173,7 @@ const Review = () => {
                   Is069
                 </h4>
               </div>
-              <p className="text-white font-kanit font-medium">
+              <p className="text-white font-kanit font-light">
                 @Leo | howtoai and the mentors guide you step by step how to get
                 guaranteed success across social media. The first account I
                 started has grown to 19,500 followers with nearly a million
@@ -197,7 +197,7 @@ const Review = () => {
                   Malik1960
                 </h4>
               </div>
-              <p className="text-white font-kanit font-medium">
+              <p className="text-white font-kanit font-light">
                 Only big W's for mentors and mods in this community. Honestly
                 helps a whole lot! They guide you step by step on how to become
                 really successful in the program
