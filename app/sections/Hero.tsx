@@ -54,16 +54,22 @@ const Hero = () => {
               src="/img/hero-bg.png"
               alt="heroimg"
               fill
-              className="z-5 w-full h-full object-cover "
+              className="z-5 w-full h-full object-cover"
+              quality={100}
+              priority
             />
+
             <div className="absolute inset-0 pointer-events-none">
               <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-black to-transparent"></div>
               <div className="absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-black to-transparent"></div>
               <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black to-transparent"></div>
             </div>
           </motion.div>
+          <div className="absolute inset-0 pointer-events-none z-20">
+            <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black to-transparent"></div>
+          </div>
 
-          <div className="absolute inset-0 flex items-center justify-center z-20">
+          <div className="absolute inset-0 flex items-center justify-center z-30">
             <Image
               src="/img/heroImage.png"
               alt="heroimg"
