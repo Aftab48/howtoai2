@@ -44,7 +44,7 @@ const Graph = () => {
             className="absolute inset-0 flex flex-col justify-start items-start space-y-6 p-10 z-10 pt-[10vh] md:pt-[26vh]
           xl:pt-[17vh]"
           >
-            <span className="text-white text-5xl">
+            <span className="text-white text-5xl font-medium font-poppins">
               {randomNumber !== null
                 ? `${randomNumber} Spots left`
                 : "Checking..."}
@@ -52,7 +52,7 @@ const Graph = () => {
             <Button
               variant="outline"
               onClick={() => scrollToSection("PRICING")}
-              className="text-white w-64 h-14 text-2xl bg-custom-button-1 hover:bg-blue-700 transition delay-150 rounded-xl"
+              className="text-white w-64 h-14 text-2xl bg-custom-button-1 hover:bg-blue-700 transition delay-150 rounded-xl font-medium font-poppins"
             >
               Join Now
             </Button>

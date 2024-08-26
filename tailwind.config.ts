@@ -11,13 +11,6 @@ const config = {
   ],
   prefix: "",
   theme: {
-    screen: {
-      screens: {
-        "max-lg": { max: "1024px" },
-        "max-md": { max: "768px" },
-        "max-sm": { max: "640px" },
-      },
-    },
     container: {
       center: true,
       padding: "2rem",
@@ -28,6 +21,8 @@ const config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        poppins: ["var(--font-poppins)", ...fontFamily.sans],
+        kanit: ["var(--font-kanit)", ...fontFamily.sans],
       },
       boxShadow: {
         inBox: "inset 5px 12px 24px -15px rgba(74,144,226,1)",

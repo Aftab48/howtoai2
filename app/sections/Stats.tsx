@@ -7,7 +7,7 @@ const Stats = () => {
     <section className="relative" id="STATS">
       <MaxWidthWrapper className="relative pb-0 sm:pt-5 md:pt-10 text-white flex flex-col justify-center z-30">
         <div className="px-16">
-          <div className="flex flex-col sm:flex-row items-center justify-between text-white py-12">
+          <div className="flex flex-col sm:flex-row items-center justify-between text-white py-12 font-poppins">
             {infoData.map((item, index) => (
               <React.Fragment key={index}>
                 <div className="flex flex-col items-center text-center px-1 xl:px-4">

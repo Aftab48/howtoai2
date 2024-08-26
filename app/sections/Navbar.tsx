@@ -9,7 +9,7 @@ import { FaDiscord, FaXTwitter } from "react-icons/fa6";
 
 const Navbar = () => {
   return (
-    <nav className="z-[100] sticky backdrop-blur-md h-14 inset-x-0 top-0 w-full transition-all">
+    <nav className="font-kanit z-[100] sticky backdrop-blur-md h-14 inset-x-0 top-0 w-full transition-all">
       <MaxWidthWrapper>
         <div className="flex h-14 items-center justify-between">
           {/*left*/}

@@ -18,12 +18,12 @@ const Hero = () => {
             per="char"
             as="h1"
             preset="slide"
-            className="text-6xl font-extrabold"
+            className="text-6xl font-poppins font-extrabold"
           >
             howtoai
           </TextEffect>
           {/* <h1 className="text-6xl font-extrabold">howtoai</h1> */}
-          <p className="mt-4 text-muted text-xl">
+          <p className="font-kanit mt-4 text-muted text-xl">
             Taking Creators To Their First <br className="block sm:hidden" />{" "}
             <span className="ml-12 sm:ml-0">$10,000 on YouTube</span>
           </p>
@@ -85,14 +85,14 @@ const Hero = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 text-center gap-20 z-20 mt-10">
             <Button
               variant="outline"
-              className="px-7 w-64 h-14 py-2 mx-2 bg-white text-xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl"
+              className="font-kanit px-7 w-64 h-14 py-2 mx-2 bg-white text-2xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl"
               onClick={() => scrollToSection("STATS")}
             >
               Learn more
             </Button>
             <Button
               variant="outline"
-              className="px-7 w-64 h-14 py-2 mx-2 bg-white text-xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl"
+              className="font-kanit px-7 w-64 h-14 py-2 mx-2 bg-white text-2xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl"
               onClick={() => scrollToSection("PRICING")}
             >
               Join now

@@ -48,7 +48,7 @@ const Review = () => {
   return (
     <section className="h-full mt-16 text-white">
       <MaxWidthWrapper className="text-center">
-        <h2 className="text-white text-6xl p-6">
+        <h2 className="text-white text-6xl p-6 font-poppins font-medium">
           See What Others have to say
           <br />
           <span>about our course</span>
@@ -76,9 +76,11 @@ const Review = () => {
                   height={48}
                   className="rounded-full mr-4"
                 />
-                <h4 className="text-lg text-[#FFFFFF] font-semibold">Risky</h4>
+                <h4 className="text-lg text-[#FFFFFF] font-kanit font-semibold">
+                  Risky
+                </h4>
               </div>
-              <p className="text-white font-semibold">
+              <p className="text-white font-kanit font-medium">
                 I joined the growth program about 1month ago, and already have
                 seen crazy results, I'm in the process of expanding on my
                 Instagram account, which I never would've even known could have
@@ -96,11 +98,11 @@ const Review = () => {
                   height={48}
                   className="rounded-full mr-4"
                 />
-                <h4 className="text-lg text-[#FFFFFF] font-semibold">
+                <h4 className="text-lg text-[#FFFFFF] font-kanit font-semibold">
                   Jfobusiness
                 </h4>
               </div>
-              <p className="text-white font-semibold">
+              <p className="text-white font-kanit font-medium">
                 THEY ARE HELPFUL AF BIG AHH VOUCH THEY ANSWER EACH AND EVERY
                 SINGLE ONE OF MY QUESTIONS AND THEY NEVER EVER LEAVE ME HANGING
                 FOR ANY QUESTIONS
@@ -120,11 +122,11 @@ const Review = () => {
                   height={48}
                   className="rounded-full mr-4"
                 />
-                <h4 className="text-lg text-[#FFFFFF] font-semibold">
+                <h4 className="text-lg text-[#FFFFFF] font-kanit font-semibold">
                   Joeyshortform
                 </h4>
               </div>
-              <p className="text-white font-semibold">
+              <p className="text-white font-kanit font-medium">
                 This is the best course I've joined and for the value they
                 provide in upgrade I have been in for a week and learning daily
                 mentors to help you out with any questions you have
@@ -140,9 +142,11 @@ const Review = () => {
                   className="rounded-full mr-4"
                 />
 
-                <h4 className="text-lg text-[#FFFFFF] font-semibold">Jbuk</h4>
+                <h4 className="text-lg text-[#FFFFFF] font-kanit font-semibold">
+                  Jbuk
+                </h4>
               </div>
-              <p className="text-white font-semibold">
+              <p className="text-white font-kanit font-medium">
                 One week ago I was making an absolute 0 with my 40k Instagram
                 account until I got into one of the weekly calls in and I showed
                 my account to @Leo | howtoai and @Mason | Chief Mentor, they
@@ -165,9 +169,11 @@ const Review = () => {
                   className="rounded-full mr-4"
                 />
 
-                <h4 className="text-lg text-[#FFFFFF] font-semibold">Is069</h4>
+                <h4 className="text-lg text-[#FFFFFF] font-kanit font-semibold">
+                  Is069
+                </h4>
               </div>
-              <p className="text-white font-semibold">
+              <p className="text-white font-kanit font-medium">
                 @Leo | howtoai and the mentors guide you step by step how to get
                 guaranteed success across social media. The first account I
                 started has grown to 19,500 followers with nearly a million
@@ -187,11 +193,11 @@ const Review = () => {
                   className="rounded-full mr-4"
                 />
 
-                <h4 className="text-lg text-[#FFFFFF] font-semibold">
+                <h4 className="text-lg text-[#FFFFFF] font-kanit font-semibold">
                   Malik1960
                 </h4>
               </div>
-              <p className="text-white font-semibold">
+              <p className="text-white font-kanit font-medium">
                 Only big W's for mentors and mods in this community. Honestly
                 helps a whole lot! They guide you step by step on how to become
                 really successful in the program

@@ -58,18 +58,18 @@ const Price1 = () => {
               overflow: "hidden",
             }}
           >
-            <h2 className="font-bold text-2xl sm:text-4xl mb-4 sm:mb-6">
+            <h2 className="font-black font-poppins text-2xl sm:text-4xl mb-4 sm:mb-6">
               Full Mentorship Program
             </h2>
-            <p className="text-lg sm:text-xl mb-6 sm:mb-10">
+            <p className="text-lg sm:text-xl font-kanit font-normal mb-6 sm:mb-10">
               Join our 1:1 mentorship to transform your YouTube and TikTok.
               Learn from experts and get a content team, winning strategies, and
               ready-to-go channels.
             </p>
-            <h3 className="text-xl sm:text-3xl font-semibold mb-4 sm:mb-6">
+            <h3 className="text-xl sm:text-3xl font-kanit font-semibold mb-4 sm:mb-6">
               Inclusions
             </h3>
-            <ul className="space-y-2 sm:space-y-4 mb-6 sm:mb-10 text-sm sm:text-base">
+            <ul className="space-y-2 sm:space-y-4 mb-6 sm:mb-10 text-base sm:text-lg font-normal font-kanit">
               <li>– Weekly private call with mentor</li>
               <li>– Fully personalized growth plan</li>
               <li>– Growth Program access & priority services</li>
@@ -82,12 +82,12 @@ const Price1 = () => {
             <div className="flex justify-between items-center mt-10">
               <Button
                 variant="outline"
-                className="bg-gray-300 text-black text-xl py-8 px-8 rounded-2xl w-3/4 mr-4"
+                className="bg-gray-300 text-black text-2xl py-8 px-8 rounded-2xl w-3/4 mr-4 font-kanit"
               >
                 Coming Soon
               </Button>
-              <div className="text-right">
-                <h3 className="text-xl sm:text-xl font-bold text-center">
+              <div className="text-right font-poppins font-medium">
+                <h3 className="text-xl sm:text-2xl font-bold text-center">
                   $2999/3
                 </h3>
                 <p className="text-md sm:text-md text-center">month</p>

@@ -96,13 +96,15 @@ const Card: React.FC<CardProps> = ({
               />
             </div>
             <div className="flex-grow flex flex-col justify-center pt-6">
-              <h3 className="text-3xl">{title}</h3>
+              <h3 className="text-3xl font-medium font-poppins">{title}</h3>
               <p className="text-gray-400 pt-2">{description}</p>
             </div>
           </div>
         </div>
         <div className="flip-card-back w-full h-full p-6 border-4 border-blue-500 text-center rounded-xl bg-[#00A3FF] flex items-center justify-center">
-          <p className="text-2xl text-zinc-50">{backContent}</p>
+          <p className="text-2xl text-zinc-50 font-kanit font-normal">
+            {backContent}
+          </p>
         </div>
       </div>
     </motion.div>
