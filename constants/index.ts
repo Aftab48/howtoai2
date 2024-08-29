@@ -1,8 +1,8 @@
 export const infoData = [
-  { value: "37", label: "Lessons" },
-  { value: "24", label: "Videos material" },
-  { value: "21", label: "Premade text guides" },
-  { value: "12", label: "Webinars" },
+  { value: 37, label: "Lessons" },
+  { value: 24, label: "Videos material" },
+  { value: 21, label: "Premade text guides" },
+  { value: 12, label: "Webinars" },
 ];
 
 export const cards = [

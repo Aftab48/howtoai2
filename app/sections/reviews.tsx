@@ -4,6 +4,7 @@ import React, { useRef, useEffect } from "react";
 import MaxWidthWrapper from "@/components/mww";
 import { motion, useScroll, useAnimation } from "framer-motion";
 import Image from "next/image";
+import { Tilt } from "react-tilt";
 
 const Review = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -67,7 +68,7 @@ const Review = () => {
             variants={childVariants}
             className="grid-s-f p-4 pb-0 sm:p-0 md:p-4 md:pb-0 lg:p-0 gap-6"
           >
-            <div className="rounded-xl p-4 shadow-test bg-[#222222]">
+            <Tilt className="rounded-xl p-4 shadow-test bg-[#222222]">
               <div className="flex items-center mb-4">
                 <Image
                   src="/img/Ellipse1.png"
@@ -88,8 +89,8 @@ const Review = () => {
                 hit 10k in less than 7 days from now due to the kindness &
                 helpfulness of our mentors. W program join up right now
               </p>
-            </div>
-            <div className="rounded-xl mb-0 sm:mb-4 md:mb-0 shadow-test p-4 bg-[#222222]">
+            </Tilt>
+            <Tilt className="rounded-xl mb-0 sm:mb-4 md:mb-0 shadow-test p-4 bg-[#222222]">
               <div className="flex items-center mb-4">
                 <Image
                   src="/img/Ellipse1.png"
@@ -107,13 +108,13 @@ const Review = () => {
                 SINGLE ONE OF MY QUESTIONS AND THEY NEVER EVER LEAVE ME HANGING
                 FOR ANY QUESTIONS
               </p>
-            </div>
+            </Tilt>
           </motion.div>
           <motion.div
             variants={childVariants}
             className="grid-f-f p-4 pb-0 sm:p-0 md:p-4 md:pb-0 lg:p-0 gap-6"
           >
-            <div className="rounded-xl shadow-test p-4 bg-[#222222]">
+            <Tilt className="rounded-xl shadow-test p-4 bg-[#222222]">
               <div className="flex items-center mb-4">
                 <Image
                   src="/img/Ellipse1.png"
@@ -131,8 +132,8 @@ const Review = () => {
                 provide in upgrade I have been in for a week and learning daily
                 mentors to help you out with any questions you have
               </p>
-            </div>
-            <div className="rounded-xl mb-0 sm:mb-4 md:mb-0 shadow-test p-4 bg-[#222222]">
+            </Tilt>
+            <Tilt className="rounded-xl mb-0 sm:mb-4 md:mb-0 shadow-test p-4 bg-[#222222]">
               <div className="flex items-center mb-4">
                 <Image
                   src="/img/Ellipse1.png"
@@ -153,13 +154,13 @@ const Review = () => {
                 both recommended how should I monetize my account, and in 3 DAYS
                 I've made almost 400$, with like 5 vids
               </p>
-            </div>
+            </Tilt>
           </motion.div>
           <motion.div
             variants={childVariants}
             className="grid-s-f p-4 sm:p-0 md:p-4 md:pb-0 lg:p-0 gap-6"
           >
-            <div className="rounded-xl shadow-test bg-[#222222] p-4">
+            <Tilt className="rounded-xl shadow-test bg-[#222222] p-4">
               <div className="flex items-center mb-4">
                 <Image
                   src="/img/Ellipse1.png"
@@ -182,8 +183,8 @@ const Review = () => {
                 to 2.5k followers in 6 days. The growth program is a game
                 changer
               </p>
-            </div>
-            <div className="rounded-xl shadow-test p-4 bg-[#222222]">
+            </Tilt>
+            <Tilt className="rounded-xl shadow-test p-4 bg-[#222222]">
               <div className="flex items-center mb-4">
                 <Image
                   src="/img/Ellipse1.png"
@@ -202,7 +203,7 @@ const Review = () => {
                 helps a whole lot! They guide you step by step on how to become
                 really successful in the program
               </p>
-            </div>
+            </Tilt>
           </motion.div>
         </motion.div>
       </MaxWidthWrapper>

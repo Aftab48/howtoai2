@@ -41,7 +41,7 @@ const Graph = () => {
           </video>
 
           <div
-            className="absolute inset-0 flex flex-col justify-start items-start space-y-6 p-10 z-10 pt-[10vh] md:pt-[26vh]
+            className="absolute inset-0 flex flex-col justify-start items-start space-y-6 p-10 z-10 pt-[10vh] md:pt-[22vh]
           xl:pt-[17vh] pl-16"
           >
             <span className="text-white text-5xl font-medium font-poppins">
