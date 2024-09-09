@@ -54,3 +54,7 @@
   display: grid;
   grid-template-rows: 2fr 3fr;
 }
+
+.image-contain {
+  object-fit: contain !important;
+}

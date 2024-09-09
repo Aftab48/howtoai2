@@ -26,26 +26,29 @@ const FramerGraphs: React.FC = () => {
           >
             <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
               <Image
-                src="/graph/g1.png"
+                src="/graph2/g1.png"
                 alt="Analytics 1"
                 width={463}
                 height={286}
+                className="image-contain"
               />
             </div>
             <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
               <Image
-                src="/img/analytics1.png"
+                src="/graph2/analytics1.png"
                 alt="Analytics 1"
                 width={463}
                 height={286}
+                className="image-contain"
               />
             </div>
             <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
               <Image
-                src="/graph/g2.png"
+                src="/graph2/g2.png"
                 alt="Analytics 1"
                 width={463}
                 height={286}
+                className="image-contain"
               />
             </div>
           </motion.div>
@@ -58,26 +61,29 @@ const FramerGraphs: React.FC = () => {
           >
             <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
               <Image
-                src="/graph/g5.png"
+                src="/graph2/g5.png"
                 alt="Analytics 1"
                 width={463}
                 height={286}
+                className="image-contain"
               />
             </div>
             <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
               <Image
-                src="/graph/g1.png"
+                src="/graph2/g1.png"
                 alt="Analytics 1"
                 width={463}
                 height={286}
+                className="image-contain"
               />
             </div>
             <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
               <Image
-                src="/img/analytics1.png"
+                src="/graph2/analytics1.png"
                 alt="Analytics 1"
                 width={463}
                 height={286}
+                className="image-contain"
               />
             </div>
           </motion.div>
@@ -97,26 +103,29 @@ const FramerGraphs: React.FC = () => {
           >
             <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
               <Image
-                src="/graph/g2.png"
+                src="/graph2/g2.png"
                 alt="Analytics 1"
                 width={463}
                 height={286}
+                className="image-contain"
               />
             </div>
             <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
               <Image
-                src="/graph/g5.png"
+                src="/graph2/g5.png"
                 alt="Analytics 1"
                 width={463}
                 height={286}
+                className="image-contain"
               />
             </div>
             <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
               <Image
-                src="/graph/g1.png"
+                src="/graph2/g1.png"
                 alt="Analytics 1"
                 width={463}
                 height={286}
+                className="image-contain"
               />
             </div>
           </motion.div>
@@ -129,26 +138,29 @@ const FramerGraphs: React.FC = () => {
           >
             <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
               <Image
-                src="/img/analytics1.png"
+                src="/graph2/analytics1.png"
                 alt="Analytics 1"
                 width={463}
                 height={286}
+                className="image-contain"
               />
             </div>
             <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
               <Image
-                src="/graph/g2.png"
+                src="/graph2/g2.png"
                 alt="Analytics 1"
                 width={463}
                 height={286}
+                className="image-contain"
               />
             </div>
             <div className="w-[463px] h-[286px] flex items-center justify-center overflow-hidden">
               <Image
-                src="/graph/g5.png"
+                src="/graph2/g5.png"
                 alt="Analytics 1"
                 width={463}
                 height={286}
+                className="image-contain"
               />
             </div>
           </motion.div>
