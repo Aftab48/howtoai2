@@ -13,13 +13,7 @@ const Footer = () => {
           <div className="items-center">
             <h4 className="text-lg text-center">©2024 howtoai</h4>
           </div>
-          <Link
-            href="https://portfolio-aftab.vercel.app/"
-            className="text-lg text-center"
-            target="_blank"
-          >
-            Made by Aftab
-          </Link>
+
           <div className="flex pl-6 sm:pl-0 gap-x-6 justify-center sm:justify-end pr-6">
             <Link
               href="https://www.youtube.com/channel/UCCSwbTR-seWT2cn9nVMp2Fw"

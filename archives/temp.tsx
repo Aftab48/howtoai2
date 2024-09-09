@@ -1,48 +1,77 @@
-import MaxWidthWrapper from "@/components/mww";
-import { infoData } from "@/constants";
-import React from "react";
+"use client";
 
-const Stats = () => {
+import { Button } from "@/components/ui/button";
+import { motion, useScroll } from "framer-motion";
+import Image from "next/image";
+import { useRef } from "react";
+
+const Price1 = () => {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "0.5 1"],
+  });
+
   return (
-    <section className="relative">
-      <MaxWidthWrapper className="relative pb-5 sm:pb-10 pt-2 sm:pt-5 md:pt-10 text-white flex flex-col justify-center z-30">
-        <div className="px-16">
-          <div className="flex flex-col sm:flex-row items-center justify-between text-white py-12">
-            {infoData.map((item, index) => (
-              <React.Fragment key={index}>
-                <div
-                  className={`flex flex-col items-center text-center px-4 ${
-                    index === 0 ? "flex-shrink-0" : "flex-grow"
-                  }`}
-                >
-                  <p className="text-4xl font lg:text-8xl font-semibold flex items-center">
-                    {item.value}
-                    {index === 1 && (
-                      <span className="text-xl lg:text-3xl pl-1 font-medium ">
-                        hrs
-                      </span>
-                    )}
-                    {index === 2 && (
-                      <span className="text-3xl lg:text-6xl pl-1 font-medium ">
-                        +
-                      </span>
-                    )}
-                  </p>
-                  <p className="mt-2 text-2xl">{item.label}</p>
-                </div>
-                {index < infoData.length - 1 && (
-                  <>
-                    <div className="h-40 hidden sm:block border-l-2 border-blue-500 mx-4" />
-                    <div className="w-40 block sm:hidden border-t-2 border-blue-500 my-4" />
-                  </>
-                )}
-              </React.Fragment>
-            ))}
+    <motion.section
+      ref={ref}
+      style={{
+        scale: scrollYProgress,
+        opacity: scrollYProgress,
+      }}
+      className="h-full py-8 sm:py-16"
+    >
+      <div className="flex flex-col sm:flex-row items-center justify-center">
+        <div className="relative flex items-center justify-between w-full max-w-4xl sm:max-w-6xl p-4 sm:p-10 bg-gradient-to-b rounded-lg sm:rounded-xl shadow-lg">
+          <Image
+            src="/img/POSE3.png"
+            alt="Mentor"
+            width={666}
+            height={400}
+            className="absolute left-0 hidden xl:block bottom-4 object-contain scale-x-[-1] z-10"
+          />
+
+          <div className="ml-auto border border-b rounded-2xl sm:rounded-3xl border-[#38B6FF] relative shadow-price bg-black w-full text-white p-6 sm:p-10">
+            <h2 className="font-black font-poppins text-2xl sm:text-4xl mb-4 sm:mb-6">
+              Full Mentorship Program
+            </h2>
+            <p className="text-lg sm:text-xl font-kanit font-normal mb-6 sm:mb-10">
+              Join our 1:1 mentorship to transform your YouTube and TikTok.
+              Learn from experts and get a content team, winning strategies, and
+              ready-to-go channels.
+            </p>
+            <h3 className="text-xl sm:text-3xl font-kanit font-semibold mb-4 sm:mb-6">
+              Inclusions
+            </h3>
+            <ul className="space-y-2 sm:space-y-4 mb-6 sm:mb-10 text-base sm:text-lg font-normal font-kanit">
+              <li>– Weekly private call with mentor</li>
+              <li>– Fully personalized growth plan</li>
+              <li>– Growth Program access & priority services</li>
+              <li>
+                – Complete channel audit, content breakdown, SEO strategy,
+                branding and funneling optimization
+              </li>
+              <li>– Aged / monetized YouTube or TikTok account and more</li>
+            </ul>
+            <div className="flex justify-between items-center mt-10">
+              <Button
+                variant="outline"
+                className="bg-gray-300 text-black text-2xl py-8 px-8 rounded-2xl w-3/4 mr-4 font-kanit"
+              >
+                Coming Soon
+              </Button>
+              <div className="text-right font-poppins font-medium">
+                <h3 className="text-xl sm:text-2xl font-bold text-center">
+                  $2999/3
+                </h3>
+                <p className="text-md sm:text-md text-center">month</p>
+              </div>
+            </div>
           </div>
         </div>
-      </MaxWidthWrapper>
-    </section>
+      </div>
+    </motion.section>
   );
 };
 
-export default Stats;
+export default Price1;

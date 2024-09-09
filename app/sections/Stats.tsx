@@ -41,8 +41,8 @@ const Stats = () => {
                 </div>
                 {index < infoData.length - 1 && (
                   <div className="flex justify-center items-center">
-                    <div className="h-40 hidden sm:block border-l-2 border-blue-500 mx-4" />
-                    <div className="w-40 block sm:hidden border-t-2 border-blue-500 my-4" />
+                    <div className="h-40 hidden sm:block border-l-2 border-[#4C9FC6] mx-4" />
+                    <div className="w-40 block sm:hidden border-t-2 border-[#4C9FC6] my-4" />
                   </div>
                 )}
               </React.Fragment>

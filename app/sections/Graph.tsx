@@ -46,13 +46,13 @@ const Graph = () => {
           >
             <span className="text-white text-5xl font-medium font-poppins">
               {randomNumber !== null
-                ? `${randomNumber} Spots left`
+                ? `${randomNumber} spots left`
                 : "Checking..."}
             </span>
             <Button
-              variant="outline"
+              variant="ghost"
               onClick={() => scrollToSection("PRICING")}
-              className="text-white w-64 h-14 text-2xl bg-custom-button-1 hover:bg-blue-700 transition delay-150 rounded-xl font-medium font-poppins"
+              className="text-white w-64 h-14 text-2xl bg-[#0E6287] hover:bg-[#0C5576] transition delay-150 rounded-xl font-medium font-poppins"
             >
               Join Now
             </Button>

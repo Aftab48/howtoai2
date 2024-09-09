@@ -1,6 +1,6 @@
 export const infoData = [
   { value: 37, label: "Lessons" },
-  { value: 24, label: "Videos material" },
+  { value: 24, label: "Video material" },
   { value: 21, label: "Premade text guides" },
   { value: 12, label: "Webinars" },
 ];
@@ -91,6 +91,26 @@ export const testimonials = [
 ];
 
 export const faqData = [
+  {
+    question: "What can I expect from the 1:1 course?",
+    answer:
+      "Our goal with the 1:1 mentorship program is to transfer the knowledge we've gained from running tens of 5 figure channels into actionable plans for you to make use of. After completing the program, you will have a full content creation team, unmatched video ideation strategy & a full YouTube & TikTok channel up and running.",
+  },
+  {
+    question: "Can I do this whilst working nine to five?",
+    answer:
+      "If you are ready to change your life, it is possible. Me (howtoai), including all of our mentors come from similar backgrounds working regular jobs every day. You can expect to put around 1-2 hours of work every day if you're looking to succeed.",
+  },
+  {
+    question: "Can I succeed without your mentorship?",
+    answer:
+      "Yes, of course. If you spend enough time, you can find all the information online. However, when I started my journey, without any guidance, I failed 4 channels in a row. This includes spending $5,000 without any return, and a big feeling of discouragement. We will provide you with all tools, assets & knowledge needed to succeed.",
+  },
+  {
+    question: "I don't know what niche to pick, will I get help?",
+    answer:
+      "Yes, we will guide you through the entire channel startup phase, providing you with untapped niches and how to budget for the content creation effectively, including hiring content creation teams.",
+  },
   {
     question: "What can I expect from the 1:1 course?",
     answer:

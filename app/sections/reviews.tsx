@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
 import MaxWidthWrapper from "@/components/mww";
-import { motion, useScroll, useAnimation } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { motion, useAnimation, useScroll } from "framer-motion";
 import Image from "next/image";
-import { Tilt } from "react-tilt";
+import { useEffect, useRef, useState } from "react";
 
 const Review = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -46,11 +46,13 @@ const Review = () => {
     },
   };
 
+  const [page, setPage] = useState(1);
+
   return (
     <section className="h-full mt-16 text-white">
       <MaxWidthWrapper className="text-center">
         <h2 className="text-white text-6xl p-6 font-poppins font-medium">
-          See What Others have to say
+          See what others have to say
           <br />
           <span>about our course</span>
         </h2>
@@ -68,7 +70,7 @@ const Review = () => {
             variants={childVariants}
             className="grid-s-f p-4 pb-0 sm:p-0 md:p-4 md:pb-0 lg:p-0 gap-6"
           >
-            <Tilt className="rounded-xl p-4 shadow-test bg-[#222222]">
+            <div className="rounded-xl p-4 shadow-test bg-[#222222]">
               <div className="flex items-center mb-4">
                 <Image
                   src="/img/Ellipse1.png"
@@ -89,8 +91,8 @@ const Review = () => {
                 hit 10k in less than 7 days from now due to the kindness &
                 helpfulness of our mentors. W program join up right now
               </p>
-            </Tilt>
-            <Tilt className="rounded-xl mb-0 sm:mb-4 md:mb-0 shadow-test p-4 bg-[#222222]">
+            </div>
+            <div className="rounded-xl mb-0 sm:mb-4 md:mb-0 shadow-test p-4 bg-[#222222]">
               <div className="flex items-center mb-4">
                 <Image
                   src="/img/Ellipse1.png"
@@ -108,13 +110,13 @@ const Review = () => {
                 SINGLE ONE OF MY QUESTIONS AND THEY NEVER EVER LEAVE ME HANGING
                 FOR ANY QUESTIONS
               </p>
-            </Tilt>
+            </div>
           </motion.div>
           <motion.div
             variants={childVariants}
             className="grid-f-f p-4 pb-0 sm:p-0 md:p-4 md:pb-0 lg:p-0 gap-6"
           >
-            <Tilt className="rounded-xl shadow-test p-4 bg-[#222222]">
+            <div className="rounded-xl shadow-test p-4 bg-[#222222]">
               <div className="flex items-center mb-4">
                 <Image
                   src="/img/Ellipse1.png"
@@ -132,8 +134,8 @@ const Review = () => {
                 provide in upgrade I have been in for a week and learning daily
                 mentors to help you out with any questions you have
               </p>
-            </Tilt>
-            <Tilt className="rounded-xl mb-0 sm:mb-4 md:mb-0 shadow-test p-4 bg-[#222222]">
+            </div>
+            <div className="rounded-xl mb-0 sm:mb-4 md:mb-0 shadow-test p-4 bg-[#222222]">
               <div className="flex items-center mb-4">
                 <Image
                   src="/img/Ellipse1.png"
@@ -154,13 +156,13 @@ const Review = () => {
                 both recommended how should I monetize my account, and in 3 DAYS
                 I've made almost 400$, with like 5 vids
               </p>
-            </Tilt>
+            </div>
           </motion.div>
           <motion.div
             variants={childVariants}
             className="grid-s-f p-4 sm:p-0 md:p-4 md:pb-0 lg:p-0 gap-6"
           >
-            <Tilt className="rounded-xl shadow-test bg-[#222222] p-4">
+            <div className="rounded-xl shadow-test bg-[#222222] p-4">
               <div className="flex items-center mb-4">
                 <Image
                   src="/img/Ellipse1.png"
@@ -183,8 +185,8 @@ const Review = () => {
                 to 2.5k followers in 6 days. The growth program is a game
                 changer
               </p>
-            </Tilt>
-            <Tilt className="rounded-xl shadow-test p-4 bg-[#222222]">
+            </div>
+            <div className="rounded-xl shadow-test p-4 bg-[#222222]">
               <div className="flex items-center mb-4">
                 <Image
                   src="/img/Ellipse1.png"
@@ -203,9 +205,167 @@ const Review = () => {
                 helps a whole lot! They guide you step by step on how to become
                 really successful in the program
               </p>
-            </Tilt>
+            </div>
           </motion.div>
+
+          {/* Pagination */}
+
+          {page === 2 && (
+            <>
+              <div className="grid-s-f p-4 mt-6 pb-0 sm:p-0 md:p-4 md:pb-0 lg:p-0 gap-6">
+                <div className="rounded-xl p-4 shadow-test bg-[#222222]">
+                  <div className="flex items-center mb-4">
+                    <Image
+                      src="/img/Ellipse1.png"
+                      alt="Risky"
+                      width={48}
+                      height={48}
+                      className="rounded-full mr-4"
+                    />
+                    <h4 className="text-lg text-[#FFFFFF] font-kanit font-semibold">
+                      Risky
+                    </h4>
+                  </div>
+                  <p className="text-white font-kanit font-light">
+                    I joined the growth program about 1month ago, and already
+                    have seen crazy results, I'm in the process of expanding on
+                    my Instagram account, which I never would've even known
+                    could have made money without @Mason | Chief Mentor 's help.
+                    And I'm gonna hit 10k in less than 7 days from now due to
+                    the kindness & helpfulness of our mentors. W program join up
+                    right now
+                  </p>
+                </div>
+                <div className="rounded-xl mb-0 sm:mb-4 md:mb-0 shadow-test p-4 bg-[#222222]">
+                  <div className="flex items-center mb-4">
+                    <Image
+                      src="/img/Ellipse1.png"
+                      alt="Jfobusiness"
+                      width={48}
+                      height={48}
+                      className="rounded-full mr-4"
+                    />
+                    <h4 className="text-lg text-[#FFFFFF] font-kanit font-semibold">
+                      Jfobusiness
+                    </h4>
+                  </div>
+                  <p className="text-white font-kanit font-light">
+                    THEY ARE HELPFUL AF BIG AHH VOUCH THEY ANSWER EACH AND EVERY
+                    SINGLE ONE OF MY QUESTIONS AND THEY NEVER EVER LEAVE ME
+                    HANGING FOR ANY QUESTIONS
+                  </p>
+                </div>
+              </div>
+              <div className="grid-f-f p-4 mt-6 pb-0 sm:p-0 md:p-4 md:pb-0 lg:p-0 gap-6">
+                <div className="rounded-xl shadow-test p-4 bg-[#222222]">
+                  <div className="flex items-center mb-4">
+                    <Image
+                      src="/img/Ellipse1.png"
+                      alt="Joe"
+                      width={48}
+                      height={48}
+                      className="rounded-full mr-4"
+                    />
+                    <h4 className="text-lg text-[#FFFFFF] font-kanit font-semibold">
+                      Joeyshortform
+                    </h4>
+                  </div>
+                  <p className="text-white font-kanit font-light">
+                    This is the best course I've joined and for the value they
+                    provide in upgrade I have been in for a week and learning
+                    daily mentors to help you out with any questions you have
+                  </p>
+                </div>
+                <div className="rounded-xl mb-0 sm:mb-4 md:mb-0 shadow-test p-4 bg-[#222222]">
+                  <div className="flex items-center mb-4">
+                    <Image
+                      src="/img/Ellipse1.png"
+                      alt="Jbuk"
+                      width={48}
+                      height={48}
+                      className="rounded-full mr-4"
+                    />
+
+                    <h4 className="text-lg text-[#FFFFFF] font-kanit font-semibold">
+                      Jbuk
+                    </h4>
+                  </div>
+                  <p className="text-white font-kanit font-light">
+                    One week ago I was making an absolute 0 with my 40k
+                    Instagram account until I got into one of the weekly calls
+                    in and I showed my account to @Leo | howtoai and @Mason |
+                    Chief Mentor, they both recommended how should I monetize my
+                    account, and in 3 DAYS I've made almost 400$, with like 5
+                    vids
+                  </p>
+                </div>
+              </div>
+              <div className="grid-s-f p-4 mt-6 sm:p-0 md:p-4 md:pb-0 lg:p-0 gap-6">
+                <div className="rounded-xl shadow-test bg-[#222222] p-4">
+                  <div className="flex items-center mb-4">
+                    <Image
+                      src="/img/Ellipse1.png"
+                      alt="Is069"
+                      width={48}
+                      height={48}
+                      className="rounded-full mr-4"
+                    />
+
+                    <h4 className="text-lg text-[#FFFFFF] font-kanit font-semibold">
+                      Is069
+                    </h4>
+                  </div>
+                  <p className="text-white font-kanit font-light">
+                    @Leo | howtoai and the mentors guide you step by step how to
+                    get guaranteed success across social media. The first
+                    account I started has grown to 19,500 followers with nearly
+                    a million likes in just under 45 days. Using the skills and
+                    guides in the discord I’ve now started a new account on
+                    Instagram that's grown to 2.5k followers in 6 days. The
+                    growth program is a game changer
+                  </p>
+                </div>
+                <div className="rounded-xl shadow-test p-4 bg-[#222222]">
+                  <div className="flex items-center mb-4">
+                    <Image
+                      src="/img/Ellipse1.png"
+                      alt="Malik1960"
+                      width={48}
+                      height={48}
+                      className="rounded-full mr-4"
+                    />
+
+                    <h4 className="text-lg text-[#FFFFFF] font-kanit font-semibold">
+                      Malik1960
+                    </h4>
+                  </div>
+                  <p className="text-white font-kanit font-light">
+                    Only big W's for mentors and mods in this community.
+                    Honestly helps a whole lot! They guide you step by step on
+                    how to become really successful in the program
+                  </p>
+                </div>
+              </div>
+            </>
+          )}
+
+          {/* pagination end */}
         </motion.div>
+
+        {/* pagination controls */}
+
+        <div className="items-center m-[1%] justify-center">
+          <Button
+            mt-6
+            onClick={() => {
+              page === 1 ? setPage(2) : setPage(1);
+            }}
+            variant="ghost"
+            className=" font-kanit px-7 w-64 h-14 py-2 mx-2 bg-white text-2xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl"
+          >
+            {page === 1 ? "Load more" : "Load Less"}
+          </Button>
+        </div>
       </MaxWidthWrapper>
     </section>
   );

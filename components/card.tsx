@@ -84,7 +84,7 @@ const Card: React.FC<CardProps> = ({
       className="relative flip-card w-[260px] h-[220px] sm:w-[300px] sm:h-[260px] px-6 sm:px-0 will-change-transform"
     >
       <div className="flip-card-inner w-full h-full">
-        <div className="flip-card-front w-full h-full p-6 border-4 border-blue-500 text-center rounded-xl shadow-inBox bg-black">
+        <div className="flip-card-front w-full h-full p-6 border-4 border-[#0E6287] text-center rounded-xl shadow-inBox bg-black">
           <div className="flex flex-col h-full">
             <div className="flex-shrink-0">
               <Image
@@ -101,7 +101,7 @@ const Card: React.FC<CardProps> = ({
             </div>
           </div>
         </div>
-        <div className="flip-card-back w-full h-full p-6 border-4 border-blue-500 text-center rounded-xl bg-[#00A3FF] flex items-center justify-center">
+        <div className="flip-card-back w-full h-full p-6 border-4 border-[#0E6287] text-center rounded-xl bg-[#0E6287] flex items-center justify-center">
           <p className="text-2xl text-zinc-50 font-kanit font-normal">
             {backContent}
           </p>

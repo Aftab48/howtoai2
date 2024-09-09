@@ -11,10 +11,10 @@ const FramerGraphs: React.FC = () => {
       <MaxWidthWrapper>
         <div className="text-center grid grid-cols-1 gap-5">
           <h2 className="text-white text-6xl font-poppins font-semibold">
-            If we can do it, so you can
+            If we can do it, so can you
           </h2>
-          <p className="text-blue-500 text-xl font-kanit font-medium">
-            Learn how to make your First $10,000 on YouTube
+          <p className="text-white text-xl font-kanit font-medium">
+            Learn how to make your first $10,000 on YouTube
           </p>
         </div>
         <div className="pt-10 flex overflow-x-hidden relative">
