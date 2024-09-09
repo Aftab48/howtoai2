@@ -17,7 +17,7 @@ const Stats = () => {
           ref={ref}
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 100 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 1.69 }}
           className="px-16"
         >
           <div className="flex flex-col sm:flex-row items-center justify-between text-white py-12 font-poppins">

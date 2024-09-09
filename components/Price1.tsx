@@ -18,6 +18,7 @@ const Price1 = () => {
       style={{
         scale: scrollYProgress,
         opacity: scrollYProgress,
+        transition: "transform 1s ease, opacity 1s ease",
       }}
       className="h-full py-8 sm:py-16"
     >
