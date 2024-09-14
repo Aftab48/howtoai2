@@ -2,13 +2,20 @@
 
 import MaxWidthWrapper from "@/components/mww";
 import { infoData } from "@/constants";
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import CountUp from "react-countup";
 import { motion, useInView } from "framer-motion";
 
 const Stats = () => {
   const ref = useRef(null);
   const inView = useInView(ref);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    if (inView && !hasAnimated) {
+      setHasAnimated(true);
+    }
+  }, [inView, hasAnimated]);
 
   return (
     <section className="relative" id="STATS">
@@ -16,7 +23,7 @@ const Stats = () => {
         <motion.div
           ref={ref}
           initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 100 }}
+          animate={{ opacity: hasAnimated ? 1 : 0, x: hasAnimated ? 0 : 100 }}
           transition={{ duration: 1.69 }}
           className="px-16"
         >

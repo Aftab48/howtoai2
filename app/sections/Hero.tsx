@@ -29,7 +29,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="relative w-full h-[550px] mt-10 z-10 overflow-hidden">
+        <div className="relative w-full h-[550px] z-10 overflow-hidden">
           <motion.div
             className="absolute inset-0"
             initial={{
@@ -40,7 +40,7 @@ const Hero = () => {
               opacity: [1, 0.5, 1],
               boxShadow: [
                 "0px 0px 0px rgba(0, 0, 255, 0)",
-                "0px 0px 20px rgba(0, 0, 255, 1)",
+                "0px 0px 48px rgba(0, 0, 255, 1)",
                 "0px 0px 0px rgba(0, 0, 255, 0)",
               ],
             }}
@@ -51,7 +51,7 @@ const Hero = () => {
             }}
           >
             <Image
-              src="/img/test.png"
+              src="/img/bg-test3.png"
               alt="heroimg-bg"
               fill
               className="z-5 w-full h-full object-cover"
@@ -82,7 +82,7 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-col items-center justify-center z-20 pt-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 text-center gap-20 z-20 mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 text-center gap-20 z-20 mt-4">
             <Button
               variant="ghost"
               className="font-kanit px-7 w-64 h-14 py-2 mx-2 bg-white text-2xl text-black hover:bg-zinc-400 transition duration-150 rounded-2xl"
