@@ -29,7 +29,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="relative w-full h-[550px] z-10 overflow-hidden">
+        <div className="relative w-full h-[500px] mt-10 z-10 overflow-hidden">
           <motion.div
             className="absolute inset-0"
             initial={{
@@ -40,7 +40,7 @@ const Hero = () => {
               opacity: [1, 0.5, 1],
               boxShadow: [
                 "0px 0px 0px rgba(0, 0, 255, 0)",
-                "0px 0px 48px rgba(0, 0, 255, 1)",
+                "0px 0px 100px rgba(0, 0, 255, 1)",
                 "0px 0px 0px rgba(0, 0, 255, 0)",
               ],
             }}
@@ -51,25 +51,14 @@ const Hero = () => {
             }}
           >
             <Image
-              src="/img/bg-test3.png"
-              alt="heroimg-bg"
+              src="/img/bg-hero.png"
+              alt="heroimg"
               fill
-              className="z-5 w-full h-full object-cover"
-              quality={100}
-              priority
+              className="z-5 w-full h-full object-cover "
             />
-
-            <div className="absolute inset-0 pointer-events-none">
-              <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-black to-transparent"></div>
-              <div className="absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-black to-transparent"></div>
-              <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black to-transparent"></div>
-            </div>
           </motion.div>
-          <div className="absolute inset-0 pointer-events-none z-20">
-            <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black to-transparent"></div>
-          </div>
 
-          <div className="absolute inset-0 flex items-center justify-center z-30">
+          <div className="absolute inset-0 flex items-center justify-center z-20">
             <Image
               src="/img/heroImage.png"
               alt="heroimg"
@@ -79,6 +68,7 @@ const Hero = () => {
               priority
             />
           </div>
+          <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black to-transparent"></div>
         </div>
 
         <div className="flex flex-col items-center justify-center z-20 pt-10">
