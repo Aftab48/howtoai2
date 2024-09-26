@@ -37,7 +37,7 @@ const Hero = () => {
               boxShadow: "0px 0px 0px rgba(0, 0, 255, 0)",
             }}
             animate={{
-              opacity: [1, 0.5, 1],
+              opacity: [1, 0.8, 1],
               boxShadow: [
                 "0px 0px 0px rgba(0, 0, 255, 0)",
                 "0px 0px 100px rgba(0, 0, 255, 1)",
@@ -47,14 +47,17 @@ const Hero = () => {
             transition={{
               repeat: Infinity,
               duration: 3,
-              ease: "easeInOut",
+              ease: "linear",
             }}
           >
             <Image
               src="/img/bg-hero.png"
               alt="heroimg"
               fill
-              className="z-5 w-full h-full object-cover "
+              className="z-5 w-full h-full object-cover"
+              quality={100}
+              priority
+              unoptimized
             />
           </motion.div>
 
